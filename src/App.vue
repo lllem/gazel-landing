@@ -1,30 +1,32 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <TopNav/>
+  <main class="flex-grow overflow-hidden">
+    <router-view/>
+  </main>
+  <FooterEl/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import TopNav from '@/components/TopNav.vue';
+import FooterEl from '@/components/FooterEl.vue';
+
+export default {
+  name: 'MainWrapper',
+  components: {
+    TopNav,
+    FooterEl,
+  },
+  mounted() {},
 }
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style lang="scss">
+html, body {
+  height: 100%;
+}
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100%;
 }
 </style>

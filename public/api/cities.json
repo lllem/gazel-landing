@@ -1,0 +1,302 @@
+[
+  {
+    "city": "Москва",
+    "translit": "Moskva"
+  },
+  {
+    "city": "Апрелевка",
+    "translit": "Aprelevka"
+  },
+  {
+    "city": "Балашиха",
+    "translit": "Balashiha"
+  },
+  {
+    "city": "Белоозёрский",
+    "translit": "Beloozyorskij"
+  },
+  {
+    "city": "Бронницы",
+    "translit": "Bronnicy"
+  },
+  {
+    "city": "Верея",
+    "translit": "Vereya"
+  },
+  {
+    "city": "Видное",
+    "translit": "Vidnoe"
+  },
+  {
+    "city": "Волоколамск",
+    "translit": "Volokolamsk"
+  },
+  {
+    "city": "Воскресенск",
+    "translit": "Voskresensk"
+  },
+  {
+    "city": "Высоковск",
+    "translit": "Vysokovsk"
+  },
+  {
+    "city": "Голицыно",
+    "translit": "Golicyno"
+  },
+  {
+    "city": "Дедовск",
+    "translit": "Dedovsk"
+  },
+  {
+    "city": "Дзержинский",
+    "translit": "Dzerzhinskij"
+  },
+  {
+    "city": "Дмитров",
+    "translit": "Dmitrov"
+  },
+  {
+    "city": "Долгопрудный",
+    "translit": "Dolgoprudnyj"
+  },
+  {
+    "city": "Домодедово",
+    "translit": "Domodedovo"
+  },
+  {
+    "city": "Дрезна",
+    "translit": "Drezna"
+  },
+  {
+    "city": "Дубна",
+    "translit": "Dubna"
+  },
+  {
+    "city": "Егорьевск",
+    "translit": "Egor'evsk"
+  },
+  {
+    "city": "Жуковский",
+    "translit": "ZHukovskij"
+  },
+  {
+    "city": "Зарайск",
+    "translit": "Zarajsk"
+  },
+  {
+    "city": "Звенигород",
+    "translit": "Zvenigorod"
+  },
+  {
+    "city": "Ивантеевка",
+    "translit": "Ivanteevka"
+  },
+  {
+    "city": "Истра",
+    "translit": "Istra"
+  },
+  {
+    "city": "Кашира",
+    "translit": "Kashira"
+  },
+  {
+    "city": "Клин",
+    "translit": "Klin"
+  },
+  {
+    "city": "Коломна",
+    "translit": "Kolomna"
+  },
+  {
+    "city": "Королёв",
+    "translit": "Korolyov"
+  },
+  {
+    "city": "Котельники",
+    "translit": "Kotel'niki"
+  },
+  {
+    "city": "Красноармейск",
+    "translit": "Krasnoarmejsk"
+  },
+  {
+    "city": "Красногорск",
+    "translit": "Krasnogorsk"
+  },
+  {
+    "city": "Краснозаводск",
+    "translit": "Krasnozavodsk"
+  },
+  {
+    "city": "Краснознаменск",
+    "translit": "Krasnoznamensk"
+  },
+  {
+    "city": "Кубинка",
+    "translit": "Kubinka"
+  },
+  {
+    "city": "Куровское",
+    "translit": "Kurovskoe"
+  },
+  {
+    "city": "Ликино-Дулёво",
+    "translit": "Likino-Dulyovo"
+  },
+  {
+    "city": "Лобня",
+    "translit": "Lobnya"
+  },
+  {
+    "city": "Лосино-Петровский",
+    "translit": "Losino-Petrovskij"
+  },
+  {
+    "city": "Луховицы",
+    "translit": "Luhovicy"
+  },
+  {
+    "city": "Лыткарино",
+    "translit": "Lytkarino"
+  },
+  {
+    "city": "Люберцы",
+    "translit": "Lyubercy"
+  },
+  {
+    "city": "Можайск",
+    "translit": "Mozhajsk"
+  },
+  {
+    "city": "Мытищи",
+    "translit": "Mytishchi"
+  },
+  {
+    "city": "Наро-Фоминск",
+    "translit": "Naro-Fominsk"
+  },
+  {
+    "city": "Ногинск",
+    "translit": "Noginsk"
+  },
+  {
+    "city": "Одинцово",
+    "translit": "Odincovo"
+  },
+  {
+    "city": "Озёры",
+    "translit": "Ozyory"
+  },
+  {
+    "city": "Орехово-Зуево",
+    "translit": "Orekhovo-Zuevo"
+  },
+  {
+    "city": "Павловский Посад",
+    "translit": "Pavlovskij Posad"
+  },
+  {
+    "city": "Пересвет",
+    "translit": "Peresvet"
+  },
+  {
+    "city": "Подольск",
+    "translit": "Podol'sk"
+  },
+  {
+    "city": "Протвино",
+    "translit": "Protvino"
+  },
+  {
+    "city": "Пушкино",
+    "translit": "Pushkino"
+  },
+  {
+    "city": "Пущино",
+    "translit": "Pushchino"
+  },
+  {
+    "city": "Раменское",
+    "translit": "Ramenskoe"
+  },
+  {
+    "city": "Реутов",
+    "translit": "Reutov"
+  },
+  {
+    "city": "Рошаль",
+    "translit": "Roshal'"
+  },
+  {
+    "city": "Руза",
+    "translit": "Ruza"
+  },
+  {
+    "city": "Сергиев Посад",
+    "translit": "Sergiev Posad"
+  },
+  {
+    "city": "Серпухов",
+    "translit": "Serpuhov"
+  },
+  {
+    "city": "Солнечногорск",
+    "translit": "Solnechnogorsk"
+  },
+  {
+    "city": "Старая Купавна",
+    "translit": "Staraya Kupavna"
+  },
+  {
+    "city": "Ступино",
+    "translit": "Stupino"
+  },
+  {
+    "city": "Талдом",
+    "translit": "Taldom"
+  },
+  {
+    "city": "Фрязино",
+    "translit": "Fryazino"
+  },
+  {
+    "city": "Химки",
+    "translit": "Himki"
+  },
+  {
+    "city": "Хотьково",
+    "translit": "Hot'kovo"
+  },
+  {
+    "city": "Черноголовка",
+    "translit": "CHernogolovka"
+  },
+  {
+    "city": "Чехов",
+    "translit": "CHekhov"
+  },
+  {
+    "city": "Шатура",
+    "translit": "SHatura"
+  },
+  {
+    "city": "Щёлково",
+    "translit": "SHCHyolkovo"
+  },
+  {
+    "city": "Электрогорск",
+    "translit": "Elektrogorsk"
+  },
+  {
+    "city": "Электросталь",
+    "translit": "Elektrostal'"
+  },
+  {
+    "city": "Электроугли",
+    "translit": "Elektrougli"
+  },
+  {
+    "city": "Яхрома",
+    "translit": "YAhroma"
+  }
+]

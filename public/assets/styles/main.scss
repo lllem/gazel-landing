@@ -1,0 +1,25 @@
+// @import 'bootstrap';
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.lh-1 {
+  line-height: 100% !important;
+}
+
+.t-gradient {
+  background: linear-gradient(90deg, #0037ff, #00d9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.t-gradient_invert {
+  background: linear-gradient(90deg, #18f4ff, #0037ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-dark {
+  background-color: #121152;
+}
