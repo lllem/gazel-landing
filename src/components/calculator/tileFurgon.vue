@@ -22,7 +22,7 @@
           v-for="furgon in furgons"
           :key="`furgon_${ furgon.title }_${ Math.random()*100000 }`"
           >
-            <img :src="`./assets/img/auto/${ furgon.img }`" class="img-cover" />
+            <img :src="`/assets/img/auto/${ furgon.img }`" class="img-cover" />
           </swiper-slide>
         </swiper>
       </keep-alive>
@@ -125,7 +125,7 @@
           :key="`furgon_${ furgon.title }_${ Math.random()*1000000 }`"
           class="px-2 w-full"
           >
-            <img :src="`./assets/img/auto/${ furgon.icon }`" :alt="furgon.title">
+            <img :src="`/assets/img/auto/${ furgon.icon }`" :alt="furgon.title">
           </swiper-slide>
         </swiper>
       </keep-alive>

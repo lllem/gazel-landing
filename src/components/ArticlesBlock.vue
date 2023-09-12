@@ -8,7 +8,7 @@
         <ArticleCard
         v-for="article in articles"
         :key="`${ article.img }_${ Math.random()*1000000 }`"
-        :img="`./assets/img/articles/${ article.img }`"
+        :img="`/assets/img/articles/${ article.img }`"
         >
           <template v-slot:title>
             {{ article.title }}
