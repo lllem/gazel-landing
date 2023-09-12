@@ -12,21 +12,21 @@
       <template v-slot:header>Ваш город</template>
 
       <div class="text-xl font-bold mb-3">
-        {{ selectedCityEl ? selectedCityEl.city : 'Москва и подмосковье' }}
+        {{ selectedCityEl ? selectedCityEl.title : 'Москва и подмосковье' }}
       </div>
 
       <div class="columns-2 md:columns-3 mb-5">
         <div
         @click="selectedCity = city.translit"
         v-for="city in cities"
-        :key="city"
+        :key="city.translit"
         :title="city.translit"
         class="select-city__city-link text-sm pb-1"
         :class="{
           'font-bold text-blue-900': city.translit == selectedCity,
           'font-bold': city.translit == selectedCity,
         }"
-        >{{ city.city }}</div>
+        >{{ city.title }}</div>
       </div>
     </modal-el>
   </teleport>

@@ -1,302 +1,346 @@
 [
   {
-    "city": "Москва",
-    "translit": "Moskva"
+    "title": "некрасовский",
+    "translit": "nekrasovskij"
   },
   {
-    "city": "Апрелевка",
-    "translit": "Aprelevka"
+    "title": "лесной",
+    "translit": "lesnoj"
   },
   {
-    "city": "Балашиха",
-    "translit": "Balashiha"
+    "title": "озерецкое",
+    "translit": "ozereckoe"
   },
   {
-    "city": "Белоозёрский",
-    "translit": "Beloozyorskij"
+    "title": "менделеево",
+    "translit": "mendeleevo"
   },
   {
-    "city": "Бронницы",
-    "translit": "Bronnicy"
+    "title": "лобня",
+    "translit": "lobnya"
   },
   {
-    "city": "Верея",
-    "translit": "Vereya"
+    "title": "жостово",
+    "translit": "zhostovo"
   },
   {
-    "city": "Видное",
-    "translit": "Vidnoe"
+    "title": "пушкино",
+    "translit": "pushkino"
   },
   {
-    "city": "Волоколамск",
-    "translit": "Volokolamsk"
+    "title": "литвиново",
+    "translit": "litvinovo"
   },
   {
-    "city": "Воскресенск",
-    "translit": "Voskresensk"
+    "title": "зеленоград",
+    "translit": "zelenograd"
   },
   {
-    "city": "Высоковск",
-    "translit": "Vysokovsk"
+    "title": "андреевка",
+    "translit": "andreevka"
   },
   {
-    "city": "Голицыно",
-    "translit": "Golicyno"
+    "title": "пироговский",
+    "translit": "pirogovskij"
   },
   {
-    "city": "Дедовск",
-    "translit": "Dedovsk"
+    "title": "ивантеевка",
+    "translit": "ivanteevka"
   },
   {
-    "city": "Дзержинский",
-    "translit": "Dzerzhinskij"
+    "title": "фрязино",
+    "translit": "fryazino"
   },
   {
-    "city": "Дмитров",
-    "translit": "Dmitrov"
+    "title": "сходня",
+    "translit": "skhodnya"
   },
   {
-    "city": "Долгопрудный",
-    "translit": "Dolgoprudnyj"
+    "title": "мизиново",
+    "translit": "mizinovo"
   },
   {
-    "city": "Домодедово",
-    "translit": "Domodedovo"
+    "title": "брехово",
+    "translit": "brekhovo"
   },
   {
-    "city": "Дрезна",
-    "translit": "Drezna"
+    "title": "долгопрудный",
+    "translit": "dolgoprudnyj"
   },
   {
-    "city": "Дубна",
-    "translit": "Dubna"
+    "title": "щелково",
+    "translit": "shchelkovo"
   },
   {
-    "city": "Егорьевск",
-    "translit": "Egor'evsk"
+    "title": "ямкино",
+    "translit": "yamkino"
   },
   {
-    "city": "Жуковский",
-    "translit": "ZHukovskij"
+    "title": "химки",
+    "translit": "himki"
   },
   {
-    "city": "Зарайск",
-    "translit": "Zarajsk"
+    "title": "мытищи",
+    "translit": "mytishchi"
   },
   {
-    "city": "Звенигород",
-    "translit": "Zvenigorod"
+    "title": "королев",
+    "translit": "korolev"
   },
   {
-    "city": "Ивантеевка",
-    "translit": "Ivanteevka"
+    "title": "свердловский",
+    "translit": "sverdlovskij"
   },
   {
-    "city": "Истра",
-    "translit": "Istra"
-  },
-  {
-    "city": "Кашира",
-    "translit": "Kashira"
-  },
-  {
-    "city": "Клин",
-    "translit": "Klin"
-  },
-  {
-    "city": "Коломна",
-    "translit": "Kolomna"
-  },
-  {
-    "city": "Королёв",
-    "translit": "Korolyov"
-  },
-  {
-    "city": "Котельники",
-    "translit": "Kotel'niki"
-  },
-  {
-    "city": "Красноармейск",
-    "translit": "Krasnoarmejsk"
-  },
-  {
-    "city": "Красногорск",
-    "translit": "Krasnogorsk"
-  },
-  {
-    "city": "Краснозаводск",
-    "translit": "Krasnozavodsk"
-  },
-  {
-    "city": "Краснознаменск",
-    "translit": "Krasnoznamensk"
-  },
-  {
-    "city": "Кубинка",
-    "translit": "Kubinka"
-  },
-  {
-    "city": "Куровское",
-    "translit": "Kurovskoe"
-  },
-  {
-    "city": "Ликино-Дулёво",
-    "translit": "Likino-Dulyovo"
-  },
-  {
-    "city": "Лобня",
-    "translit": "Lobnya"
-  },
-  {
-    "city": "Лосино-Петровский",
+    "title": "Лосино-Петровский",
     "translit": "Losino-Petrovskij"
   },
   {
-    "city": "Луховицы",
-    "translit": "Luhovicy"
-  },
-  {
-    "city": "Лыткарино",
-    "translit": "Lytkarino"
-  },
-  {
-    "city": "Люберцы",
-    "translit": "Lyubercy"
-  },
-  {
-    "city": "Можайск",
-    "translit": "Mozhajsk"
-  },
-  {
-    "city": "Мытищи",
-    "translit": "Mytishchi"
-  },
-  {
-    "city": "Наро-Фоминск",
-    "translit": "Naro-Fominsk"
-  },
-  {
-    "city": "Ногинск",
+    "title": "Ногинск",
     "translit": "Noginsk"
   },
   {
-    "city": "Одинцово",
-    "translit": "Odincovo"
+    "title": "Путилково",
+    "translit": "Putilkovo"
   },
   {
-    "city": "Озёры",
-    "translit": "Ozyory"
+    "title": "Дедовск",
+    "translit": "Dedovsk"
   },
   {
-    "city": "Орехово-Зуево",
-    "translit": "Orekhovo-Zuevo"
+    "title": "Нахабино",
+    "translit": "Nahabino"
   },
   {
-    "city": "Павловский Посад",
-    "translit": "Pavlovskij Posad"
+    "title": "Красногорск",
+    "translit": "Krasnogorsk"
   },
   {
-    "city": "Пересвет",
-    "translit": "Peresvet"
+    "title": "Монино",
+    "translit": "Monino"
   },
   {
-    "city": "Подольск",
-    "translit": "Podol'sk"
+    "title": "Павловская Слобода",
+    "translit": "Pavlovskaya Sloboda"
   },
   {
-    "city": "Протвино",
-    "translit": "Protvino"
+    "title": "Старая купавна",
+    "translit": "Staraya kupavna"
   },
   {
-    "city": "Пушкино",
-    "translit": "Pushkino"
+    "title": "Балашиха",
+    "translit": "Balashiha"
   },
   {
-    "city": "Пущино",
-    "translit": "Pushchino"
-  },
-  {
-    "city": "Раменское",
-    "translit": "Ramenskoe"
-  },
-  {
-    "city": "Реутов",
-    "translit": "Reutov"
-  },
-  {
-    "city": "Рошаль",
-    "translit": "Roshal'"
-  },
-  {
-    "city": "Руза",
-    "translit": "Ruza"
-  },
-  {
-    "city": "Сергиев Посад",
-    "translit": "Sergiev Posad"
-  },
-  {
-    "city": "Серпухов",
-    "translit": "Serpuhov"
-  },
-  {
-    "city": "Солнечногорск",
-    "translit": "Solnechnogorsk"
-  },
-  {
-    "city": "Старая Купавна",
-    "translit": "Staraya Kupavna"
-  },
-  {
-    "city": "Ступино",
-    "translit": "Stupino"
-  },
-  {
-    "city": "Талдом",
-    "translit": "Taldom"
-  },
-  {
-    "city": "Фрязино",
-    "translit": "Fryazino"
-  },
-  {
-    "city": "Химки",
-    "translit": "Himki"
-  },
-  {
-    "city": "Хотьково",
-    "translit": "Hot'kovo"
-  },
-  {
-    "city": "Черноголовка",
-    "translit": "CHernogolovka"
-  },
-  {
-    "city": "Чехов",
-    "translit": "CHekhov"
-  },
-  {
-    "city": "Шатура",
-    "translit": "SHatura"
-  },
-  {
-    "city": "Щёлково",
-    "translit": "SHCHyolkovo"
-  },
-  {
-    "city": "Электрогорск",
-    "translit": "Elektrogorsk"
-  },
-  {
-    "city": "Электросталь",
+    "title": "Электросталь",
     "translit": "Elektrostal'"
   },
   {
-    "city": "Электроугли",
+    "title": "Реутов",
+    "translit": "Reutov"
+  },
+  {
+    "title": "Железнодорожный",
+    "translit": "ZHeleznodorozhnyj"
+  },
+  {
+    "title": "Немчиновка",
+    "translit": "Nemchinovka"
+  },
+  {
+    "title": "Электроугли",
     "translit": "Elektrougli"
   },
   {
-    "city": "Яхрома",
-    "translit": "YAhroma"
+    "title": "пос. им Воровского",
+    "translit": "pos. im Vorovskogo"
+  },
+  {
+    "title": "Горки-10",
+    "translit": "Gorki-10"
+  },
+  {
+    "title": "Заречье",
+    "translit": "Zarech'e"
+  },
+  {
+    "title": "Одинцово",
+    "translit": "Odincovo"
+  },
+  {
+    "title": "Люберцы",
+    "translit": "Lyubercy"
+  },
+  {
+    "title": "Власиха",
+    "translit": "Vlasiha"
+  },
+  {
+    "title": "пос. ВНИИССОК",
+    "translit": "pos. VNIISSOK"
+  },
+  {
+    "title": "Томилино",
+    "translit": "Tomilino"
+  },
+  {
+    "title": "Дзержинский",
+    "translit": "Dzerzhinskij"
+  },
+  {
+    "title": "пос. Мосрентген",
+    "translit": "pos. Mosrentgen"
+  },
+  {
+    "title": "Голицыно",
+    "translit": "Golicyno"
+  },
+  {
+    "title": "Звенигород",
+    "translit": "Zvenigorod"
+  },
+  {
+    "title": "Ершово",
+    "translit": "Ershovo"
+  },
+  {
+    "title": "Часцы",
+    "translit": "CHascy"
+  },
+  {
+    "title": "Жуковский",
+    "translit": "ZHukovskij"
+  },
+  {
+    "title": "Гжель",
+    "translit": "Gzhel'"
+  },
+  {
+    "title": "Развилка",
+    "translit": "Razvilka"
+  },
+  {
+    "title": "Московский",
+    "translit": "Moskovskij"
+  },
+  {
+    "title": "Краснознаменск",
+    "translit": "Krasnoznamensk"
+  },
+  {
+    "title": "Речицы",
+    "translit": "Rechicy"
+  },
+  {
+    "title": "Лыткарино",
+    "translit": "Lytkarino"
+  },
+  {
+    "title": "Раменское",
+    "translit": "Ramenskoe"
+  },
+  {
+    "title": "Видное",
+    "translit": "Vidnoe"
+  },
+  {
+    "title": "Коммунарка",
+    "translit": "Kommunarka"
+  },
+  {
+    "title": "Апрелевка",
+    "translit": "Aprelevka"
+  },
+  {
+    "title": "Дубовая роща",
+    "translit": "Dubovaya roshcha"
+  },
+  {
+    "title": "Селятино",
+    "translit": "Selyatino"
+  },
+  {
+    "title": "Дрожжино",
+    "translit": "Drozhzhino"
+  },
+  {
+    "title": "пос. Володарского",
+    "translit": "pos. Volodarskogo"
+  },
+  {
+    "title": "Софьино",
+    "translit": "Sof'ino"
+  },
+  {
+    "title": "Троицк",
+    "translit": "Troick"
+  },
+  {
+    "title": "Щербинка",
+    "translit": "SHCHerbinka"
+  },
+  {
+    "title": "Константиново",
+    "translit": "Konstantinovo"
+  },
+  {
+    "title": "Подольск",
+    "translit": "Podol'sk"
+  },
+  {
+    "title": "Домодедово",
+    "translit": "Domodedovo"
+  },
+  {
+    "title": "Климовск",
+    "translit": "Klimovsk"
+  },
+  {
+    "title": "Красная пахра",
+    "translit": "Krasnaya pahra"
+  },
+  {
+    "title": "Шишкин лес",
+    "translit": "SHishkin les"
+  },
+  {
+    "title": "Кленово",
+    "translit": "Klenovo"
+  },
+  {
+    "title": "Львовский",
+    "translit": "L'vovskij"
+  },
+  {
+    "title": "Востряково",
+    "translit": "Vostryakovo"
+  },
+  {
+    "title": "Белые столбы",
+    "translit": "Belye stolby"
+  },
+  {
+    "title": "Красный путь",
+    "translit": "Krasnyj put'"
+  },
+  {
+    "title": "Рылеево",
+    "translit": "Ryleevo"
+  },
+  {
+    "title": "Заворово",
+    "translit": "Zavorovo"
+  },
+  {
+    "title": "Бронницы",
+    "translit": "Bronnicy"
+  },
+  {
+    "title": "Ульянино",
+    "translit": "Ul'yanino"
+  },
+  {
+    "title": "Белоозерский",
+    "translit": "Beloozerskij"
   }
 ]
