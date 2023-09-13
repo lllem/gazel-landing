@@ -6,14 +6,6 @@ export default createStore({
     contacts: {
       tel: '+79000000000',
       email: 'nnn@nn.ru',
-      articles: [
-        {
-          id: '______',
-          title: '______',
-          description: '______',
-          preview: '______',
-        },
-      ],
     },
     furgons: [
       {
@@ -61,28 +53,7 @@ export default createStore({
         price: 5000,
       },
     ],
-    articles: [
-      {
-        img: 'House-Clearances-x1.webp',
-        title: 'Вывоз старой мебели газелью',
-        desc: 'Вывоз старой мебели газелью',
-      },
-      {
-        img: '03-vyvoz-musora-v-spb.webp',
-        title: 'Вывоз строительного мусора газелью',
-        desc: 'Вывоз строительного мусора газелью',
-      },
-      {
-        img: '5207287114656795_95d3.webp',
-        title: 'Вывоз мусора из квартиры газель с грузчиками',
-        desc: 'Вывоз мусора из квартиры газель с грузчиками',
-      },
-      {
-        img: '5207287114656795_95d3.webp',
-        title: 'Вывоз мусора из квартиры газель с грузчиками',
-        desc: 'Вывоз мусора из квартиры газель с грузчиками',
-      },
-    ],
+    articles: [],
     cities: [],
   },
   getters: {
@@ -93,25 +64,31 @@ export default createStore({
   },
   mutations: {
     UPDATE_CITIES (state, payload) {
-      console.log('payload', payload)
-      state.cities = payload
-    }
-  },
-  actions: {
-    async loadCities() {
-      let cities;
-
-      await axios
-        .get('./api/cities.json')
-        .then(response => {
-          cities = response.data
-          this.commit('UPDATE_CITIES', response.data)
-        })
-        .catch(error => console.log(error));
-
-      console.log(cities)
+      state.cities.list = payload
+    },
+    UPDATE_ARTICLES (state, payload) {
+      state.articles = payload
     },
   },
-  modules: {
-  }
+  actions: {
+
+    async loadCities() {
+      await axios
+        .get('/api/cities.json')
+        .then(response => {
+          this.commit('UPDATE_CITIES', response.data)
+        })
+        .catch(error => console.log(error))
+    },
+
+    async loadArticles() {
+      await axios
+        .get('/api/articles.json')
+        .then(response => {
+          this.commit('UPDATE_ARTICLES', response.data)
+        })
+        .catch(error => console.log(error))
+    },
+  },
+  modules: {}
 })

@@ -21,49 +21,10 @@ const routes = [
     ],
   },
   {
-    path: '/mebel',
-    name: 'mebel',
-    meta: {
-      title: 'Вывоз старой мебели газелью',
-    },
-    component: () => import('../views/AboutView.vue')
-  },
-  {
-    path: '/stroitelniy',
-    name: 'stroitelniy',
-    meta: {
-      title: 'Вывоз строительного мусора газелью',
-    },
-    component: () => import('../views/AboutView.vue')
-  },
-  {
-    path: '/gruzchiki',
-    name: 'gruzchiki',
-    meta: {
-      title: 'Вывоз мусора на газели с грузчиками',
-    },
-    component: () => import('../views/AboutView.vue')
-  },
-  {
-    path: '/kvartira',
-    name: 'kvartira',
-    meta: {
-      title: 'Вывоз мусора из квартиры газелью',
-    },
-    component: () => import('../views/AboutView.vue')
-  },
-  {
-    path: '/oplata',
-    name: 'oplata',
-    meta: {
-      title: 'Вывоз вывоз мусора по безналу',
-    },
-    component: () => import('../views/AboutView.vue')
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue')
+    path: '/articles/:article',
+    props: true,
+    name: 'article',
+    component: () => import('../views/ArticleView.vue'),
   },
   {
     path: '/:pathMatch(.*)*',

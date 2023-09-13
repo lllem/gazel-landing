@@ -4,11 +4,15 @@
 
       <subtitleEl invert>Статьи</subtitleEl>
 
-      <div class="grid md:grid-cols-3 gap-4 mb-5">
+      <div
+      v-if="articles.length"
+      class="grid md:grid-cols-3 gap-4 mb-5"
+      >
         <ArticleCard
         v-for="article in articles"
+        :to="article.link"
         :key="`${ article.img }_${ Math.random()*1000000 }`"
-        :img="`/assets/img/articles/${ article.img }`"
+        :img="`/assets/img/articles/preview/${ article.img }`"
         >
           <template v-slot:title>
             {{ article.title }}
@@ -38,6 +42,9 @@ export default {
     ...mapGetters([
       'articles',
     ]),
+  },
+  mounted() {
+    this.$store.dispatch('loadArticles')
   },
 }
 </script>
