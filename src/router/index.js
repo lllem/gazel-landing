@@ -12,9 +12,6 @@ const routes = [
     path: '/region/:city',
     props: true,
     name: 'region',
-    meta: {
-      title: 'Выбор региона',
-    },
     component: () => import('../views/HomeView.vue'),
     children: [
 

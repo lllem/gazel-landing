@@ -11,6 +11,14 @@ import miniTable from '@/components/core/miniTable.vue'
 import modalEl from '@/components/core/modalEl.vue'
 import modalEl_1 from '@/components/core/modal/modalEl.vue'
 
+const DEFAULT_TITLE = 'Вывоз мусора ГАЗелью'
+
+router.beforeEach((to, from) => {
+  console.log(DEFAULT_TITLE, to, from)
+  if (to.meta.title) document.title = `${to.meta.title} | ${DEFAULT_TITLE}`
+  else document.title = DEFAULT_TITLE
+})
+
 createApp(App)
   .use(store)
   .use(router)

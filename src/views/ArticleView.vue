@@ -9,7 +9,7 @@
 
         <h1 class="text-4xl font-bold mе-9 mb-6">{{ currentArticle.title }}</h1>
 
-        <p class="text-xl mb-9">{{ currentArticle.desc }}</p>
+        <p class="text-xl text-blue-200 mb-9">{{ currentArticle.desc }}</p>
 
       </div>
     </header>
@@ -88,8 +88,11 @@ export default {
   async mounted() {
     await this.$store.dispatch('loadArticles')
     this.loadArticleHTML()
-  },
 
+    const DEFAULT_TITLE = 'Вывоз мусора ГАЗелью'
+
+    if (this.currentArticle) document.title = `${this.currentArticle.title} | ${ DEFAULT_TITLE }`
+  },
 }
 </script>
 
@@ -99,9 +102,7 @@ export default {
 .article {
   .article__header {}
 
-  .article__main-img {
-    // margin-top: -20%;
-  }
+  .article__main-img {}
 
   .article__cover {
     position: relative;
