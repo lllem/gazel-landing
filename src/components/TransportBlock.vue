@@ -17,7 +17,6 @@
 
     <div class="transport__illustration max-w-screen-lg mx-auto">
       <img src="@/assets/img/auto/auto_sobol.webp" class="w-full" alt="Авто">
-
     </div>
   </section>
 </template>

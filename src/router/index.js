@@ -9,12 +9,24 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/region/:city',
+    props: true,
+    name: 'region',
+    meta: {
+      title: 'Выбор региона',
+    },
+    component: () => import('../views/HomeView.vue'),
+    children: [
+
+    ],
+  },
+  {
     path: '/mebel',
     name: 'mebel',
     meta: {
       title: 'Вывоз старой мебели газелью',
     },
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
   },
   {
     path: '/stroitelniy',
@@ -22,7 +34,7 @@ const routes = [
     meta: {
       title: 'Вывоз строительного мусора газелью',
     },
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
   },
   {
     path: '/gruzchiki',
@@ -30,7 +42,7 @@ const routes = [
     meta: {
       title: 'Вывоз мусора на газели с грузчиками',
     },
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
   },
   {
     path: '/kvartira',
@@ -38,7 +50,7 @@ const routes = [
     meta: {
       title: 'Вывоз мусора из квартиры газелью',
     },
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
   },
   {
     path: '/oplata',
@@ -46,15 +58,17 @@ const routes = [
     meta: {
       title: 'Вывоз вывоз мусора по безналу',
     },
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404',
+    component: () => import('../views/ErrorPage404.vue')
   }
 ]
 

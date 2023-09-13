@@ -1,6 +1,6 @@
 <template>
   <TopNav/>
-  <main class="flex-grow overflow-hidden">
+  <main class="flex-grow overflow-hidden flex">
     <router-view/>
   </main>
   <FooterEl/>
@@ -16,7 +16,9 @@ export default {
     TopNav,
     FooterEl,
   },
-  mounted() {},
+  mounted() {
+    this.$store.dispatch('loadCities')
+  },
 }
 </script>
 
@@ -28,5 +30,9 @@ html, body {
   display: flex;
   flex-flow: column nowrap;
   min-height: 100%;
+
+  main {
+    flex-flow: column nowrap;
+  }
 }
 </style>

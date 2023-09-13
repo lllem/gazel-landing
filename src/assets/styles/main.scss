@@ -12,12 +12,14 @@
 
 .t-gradient {
   background: linear-gradient(90deg, #0037ff, #00d9ff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .t-gradient_invert {
   background: linear-gradient(90deg, #18f4ff, #0037ff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -77,4 +79,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.bg-contain {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
