@@ -8,26 +8,40 @@
 
     <ul class="font-extrabold text-2xl mb-6">
 
-      <li class="py-2 border-bottom flex items-center">
-        <label class="movers__item">
-          <span class="me-2">1</span> <iconEl icon="user"/>
+      <li class="py-1 border-bottom flex items-center">
+        <label
+        class="movers__item px-4 py-1 font-semibold border-blue-500 border-solid border-2 text-white rounded-xl"
+        :class="{
+          'bg-blue-500 shadow-sm shadow-blue-500/50': moversQty === 1
+        }"
+        >
+          <span class="me-2">1</span>
+          <iconEl icon="user" class="me-1 mb-1"/>
           <input
           type="radio"
           v-model="moversQty"
           :value="1"
           name="moversQty"
+          class="me-1"
           >
         </label>
       </li>
 
-      <li class="py-2 border-bottom flex items-center">
-        <label class="movers__item">
-          <span class="me-2">2</span> <iconEl icon="users"/>
+      <li class="py-1 border-bottom flex items-center">
+        <label
+        class="movers__item px-4 py-1 font-semibold border-blue-500 border-solid border-2 text-white rounded-xl"
+        :class="{
+          'bg-blue-500 shadow-sm shadow-blue-500/50': moversQty === 2
+        }"
+        >
+          <span class="me-2">2</span>
+          <iconEl icon="users" class="me-1 mb-1"/>
           <input
           type="radio"
           v-model="moversQty"
           :value="2"
           name="moversQty"
+          class="me-1"
           >
         </label>
       </li>
@@ -71,7 +85,9 @@ export default {
   }
 
   .movers__item {
-    cursor: pointer;
+    &, & * {
+      cursor: pointer;
+    }
   }
 }
 
