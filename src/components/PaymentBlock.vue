@@ -18,7 +18,13 @@
       <p class="text-indigo-900 font-semibold max-w-2xl mx-auto mb-10">Вы можете оплатить вывоз ГАЗелью строительного мусора, бытовых или&nbsp;других отходов наличными, пластиковой картой или&nbsp;электронным кошельком. Также мы принимаем переводы на&nbsp;расчетный счет. Последнее особенно актуально для&nbsp;юрлиц.</p>
 
     </div>
-    <img class="payment-block__bg" src="@/assets/img/__large_GAZ_Sobol_10_v3-_low.webp" alt="">
+    <img
+    width="1920"
+    height="1180"
+    class="payment-block__bg"
+    src="@/assets/img/__large_GAZ_Sobol_10_v3-_low.webp"
+    alt="Вывоз мусора газелью, как происходит оплата"
+    >
   </section>
 </template>
 
@@ -56,15 +62,16 @@ export default {
 .payment-block {
   position: relative;
   z-index: 1;
+    margin-bottom: -23%;
 
   .payment-block__icon {
     font-size: 3rem;
   }
 
   .payment-block__bg {
-    margin: -20% 0 -23%;
     position: relative;
     z-index: -1;
+    margin-top: -20%;
   }
 
   &::before {
