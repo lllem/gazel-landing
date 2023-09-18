@@ -29,6 +29,8 @@
       <section v-html="articleHTML"></section>
     </section>
 
+    <ArticlesBlock/>
+
   </div>
 
   <ErrorPage404 v-else />
@@ -39,6 +41,7 @@ import { mapGetters } from 'vuex'
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import ErrorPage404 from '@/views/ErrorPage404.vue'
 import axios from 'axios'
+import ArticlesBlock from '@/components/ArticlesBlock.vue'
 
 export default {
   props: {
@@ -53,6 +56,7 @@ export default {
   components: {
     HeaderBlock,
     ErrorPage404,
+    ArticlesBlock,
   },
   computed: {
     ...mapGetters([

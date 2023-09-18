@@ -1,27 +1,58 @@
 <template>
   <section class="articles-block text-center py-10 bg-dark text-white">
-    <div class="container max-w-lg md:max-w-screen-lg mx-auto px-3">
+    <div
+    class="container max-w-lg md:max-w-screen-lg mx-auto md:px-3--"
+    v-if="articles && articles.length"
+    >
 
       <subtitleEl invert>Статьи</subtitleEl>
 
-      <div
-      v-if="articles.length"
-      class="grid md:grid-cols-3 gap-4 mb-5"
+      <swiper
+      :spaceBetween="16"
+      :centeredSlides="false"
+      :slidesPerView="1.5"
+      :loop="false"
+      :grabCursor="true"
+      :slidesOffsetAfter="32"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: true,
+      }"
+      :modules="modules"
+      :breakpoints="{
+        '640': {
+          slidesPerView: 2.5,
+        },
+        '768': {
+          slidesPerView: 3.5,
+        },
+        '1024': {
+          slidesPerView: 3.5,
+        },
+      }"
+      :pagination="{
+        dynamicBullets: true,
+      }"
+      class="articles-slider mb-4"
       >
-        <ArticleCard
+        <swiper-slide
         v-for="article in articles"
-        :to="article.link"
         :key="`${ article.img }_${ Math.random()*1000000 }`"
-        :img="`/assets/img/articles/preview/${ article.img }`"
+        class="py-2 w-full"
         >
-          <template v-slot:title>
-            {{ article.title }}
-          </template>
-          <template v-slot:desc>
-            {{ article.desc }}
-          </template>
-        </ArticleCard>
-      </div>
+          <ArticleCard
+          :to="article.link"
+          :key="`${ article.img }_${ Math.random()*1000000 }`"
+          :img="`/assets/img/articles/preview/${ article.img }`"
+          class="h-full"
+          >
+            <template v-slot:title>
+              {{ article.title }}
+            </template>
+            <!-- <template v-slot:desc>{{ article.desc }}</template> -->
+          </ArticleCard>
+        </swiper-slide>
+      </swiper>
 
     </div>
   </section>
@@ -31,9 +62,15 @@
 import { mapGetters } from 'vuex';
 import ArticleCard from '@/components/core/ArticleCard.vue'
 
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay } from 'swiper';
+import { Pagination } from 'swiper';
+
 export default {
   components: {
     ArticleCard,
+    Swiper,
+    SwiperSlide,
   },
   data() {
     return {}
@@ -46,9 +83,45 @@ export default {
   mounted() {
     this.$store.dispatch('loadArticles')
   },
+  setup() {
+    return {
+      modules: [Autoplay, Pagination],
+    };
+  },
 }
 </script>
 
 <style lang="scss">
-.articles-block {}
+@import '@/assets/styles/tokens.scss';
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+.articles-block {
+  .swiper {
+    $border-style: 1px solid rgba(#fff, 0.15);
+    border-left: $border-style;
+    border-right: $border-style;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 2rem;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border: 1px solid red;
+      z-index: 2;
+    }
+
+    .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+      background-color: #fff !important;
+    }
+
+    .swiper-wrapper {
+      padding: 0 1rem 2rem 1rem;
+    }
+  }
+
+}
 </style>

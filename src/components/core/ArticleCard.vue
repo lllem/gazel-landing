@@ -53,10 +53,12 @@ export default {
 
   .article-card__title {
     line-height: 1;
+    min-height: 3em;
   }
 
   .article-card__desc {
     line-height: 1;
+    min-height: 2em;
   }
 }
 </style>
