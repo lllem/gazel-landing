@@ -105,13 +105,22 @@ export default {
     &::before,
     &::after {
       content: '';
-      width: 2rem;
+      width: 1rem;
       display: inline-block;
       position: absolute;
       top: 0;
       bottom: 0;
-      border: 1px solid red;
       z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+      background-image: linear-gradient(90deg, $dark 0%, rgba($dark, 0) 100%);
+    }
+
+    &::after {
+      right: 0;
+      background-image: linear-gradient(-90deg, rgba($dark, 0.85) 0%, rgba($dark, 0.5) 25%, rgba($dark, 0) 100%);
     }
 
     .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
