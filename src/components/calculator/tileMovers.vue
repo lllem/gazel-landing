@@ -6,7 +6,7 @@
 
     <h3 class="calculator__subtitle tracking-widest text-start uppercase font-extrabold text-sm mb-5">Грузчики</h3>
 
-    <ul class="font-extrabold text-2xl mb-6">
+    <ul class="calculator__movers-buttons font-extrabold text-2xl mb-6">
 
       <li class="py-1 border-bottom flex items-center">
         <label
@@ -22,7 +22,6 @@
           v-model="moversQty"
           :value="1"
           name="moversQty"
-          class="me-1"
           >
         </label>
       </li>
@@ -41,7 +40,6 @@
           v-model="moversQty"
           :value="2"
           name="moversQty"
-          class="me-1"
           >
         </label>
       </li>
@@ -87,6 +85,15 @@ export default {
   .movers__item {
     &, & * {
       cursor: pointer;
+    }
+  }
+
+  .calculator__movers-buttons {
+    display: inline-flex;
+    flex-flow: column nowrap;
+
+    > li, label {
+      width: 100%;
     }
   }
 }

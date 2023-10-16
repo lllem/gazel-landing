@@ -13,8 +13,7 @@ import modalEl_1 from '@/components/core/modal/modalEl.vue'
 
 const DEFAULT_TITLE = 'Вывоз мусора ГАЗелью'
 
-router.beforeEach((to, from) => {
-  console.log(DEFAULT_TITLE, to, from)
+router.beforeEach((to) => {
   if (to.meta.title) document.title = `${to.meta.title} | ${DEFAULT_TITLE}`
   else document.title = DEFAULT_TITLE
 })

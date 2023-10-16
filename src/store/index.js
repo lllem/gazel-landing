@@ -1,11 +1,12 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
+import Cities from './modules/cities'
 
 export default createStore({
   state: {
     contacts: {
       tel: '+79000000000',
-      email: 'nnn@nn.ru',
+      email: 'hello@nn.ru',
     },
     furgons: [
       {
@@ -54,32 +55,18 @@ export default createStore({
       },
     ],
     articles: [],
-    cities: [],
   },
   getters: {
     furgons: state => state.furgons,
     contacts: state => state.contacts,
     articles: state => state.articles,
-    cities: state => state.cities,
   },
   mutations: {
-    UPDATE_CITIES (state, payload) {
-      state.cities.list = payload
-    },
     UPDATE_ARTICLES (state, payload) {
       state.articles = payload
     },
   },
   actions: {
-
-    async loadCities() {
-      await axios
-        .get('/api/cities.json')
-        .then(response => {
-          this.commit('UPDATE_CITIES', response.data)
-        })
-        .catch(error => console.log(error))
-    },
 
     async loadArticles() {
       await axios
@@ -90,5 +77,7 @@ export default createStore({
         .catch(error => console.log(error))
     },
   },
-  modules: {}
+  modules: {
+    Cities,
+  }
 })

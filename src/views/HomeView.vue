@@ -1,7 +1,6 @@
 <template>
-  <HeaderBlock class="py-5"/>
+  <HeaderBlock/>
   <CalculatorBlock/>
-
   <BenefitsBlock/>
   <introBlock/>
   <WhenBlock/>
@@ -59,48 +58,6 @@ export default {
     TransportBlock,
     PhotosBlock,
     ArticlesBlock,
-  },
-  data() {
-    return {
-      routes: [
-        {
-          path: '/',
-          meta: {
-            title: 'Главная',
-          },
-        },
-        {
-          path: '/mebel',
-          meta: {
-            title: 'Вывоз старой мебели газелью',
-          },
-        },
-        {
-          path: '/stroitelniy',
-          meta: {
-            title: 'Вывоз строительного мусора газелью',
-          },
-        },
-        {
-          path: '/gruzchiki',
-          meta: {
-            title: 'Вывоз мусора на газели с грузчиками',
-          },
-        },
-        {
-          path: '/kvartira',
-          meta: {
-            title: 'Вывоз мусора из квартиры газелью',
-          },
-        },
-        {
-          path: '/oplata',
-          meta: {
-            title: 'Вывоз вывоз мусора по безналу',
-          },
-        },
-      ]
-    };
   },
 }
 </script>

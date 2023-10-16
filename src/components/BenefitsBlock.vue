@@ -2,8 +2,6 @@
   <section class="mt-5 mb-10 text-center container max-w-screen-lg mx-auto">
 
     <div class="px-4">
-      <!-- <subtitleEl>Чем мы отличаемся от&nbsp;других компаний?</subtitleEl> -->
-
       <p class="mb-2 uppercase font-bold text-blue-600">Главные преимущества сотрудничества с нами</p>
     </div>
 
@@ -86,41 +84,34 @@ export default {
         {
           title: 'Собственный автопарк',
           icon: 'truck',
-          // Melor
         },
         {
           title: 'Более 10&nbsp;лет опыта',
           icon: 'trophy',
-          // Melor
         },
         {
           title: 'Работа 24/7',
           icon: 'clock',
-          // Melor
         },
         {
           title: 'Лояльные цены',
           description: 'Никаких доплат и&nbsp;переплат, только честные и&nbsp;фиксированные цены',
           icon: 'circle-stack',
-          // Melor
         },
         {
           title: 'Большой охват территории',
           description: 'Москва, ближайшее Подмосковье, область',
           icon: 'globe-alt',
-          // Melor
         },
         {
           title: 'Оперативность выполнения заказов',
           description: 'Быстрые сроки исполнения за&nbsp;счёт использования собственной техники',
           icon: 'bolt',
-          // Melor
         },
         {
           title: 'Безопасность окружающей среды',
           description: 'Мы не&nbsp;загрязняем природу, все отходы вывозятся на&nbsp;специальный полигон или&nbsp;сдаются на&nbsp;утилизацию',
           icon: 'sun',
-          // Melor
         },
       ]
     };

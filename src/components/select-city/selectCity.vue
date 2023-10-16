@@ -1,32 +1,51 @@
 <template>
+  <!-- Дропдаун -->
   <a
   @click="modalOpen = true"
   class="select-city font-semibold text-sm text-sky-300 nowrap"
   >
-    Москва и Подмосковье <iconEl icon="chevron-down"/>
+   {{ this.cities.selectedCity.title }} <iconEl icon="chevron-down"/>
   </a>
+  <!-- / Дропдаун -->
 
   <teleport to="body">
     <modal-el v-if="modalOpen" v-model="modalOpen">
 
-      <template v-slot:header>Ваш город</template>
+      <div class="uppercase">Ваш город</div>
 
-      <div class="text-xl font-bold mb-3">
-        {{ selectedCityEl ? selectedCityEl.title : 'Москва и подмосковье' }}
+      <div class="mb-8">
+        <h2 class="text-4xl font-bold text-blue-900">
+          {{ cities.selectedCity.title }}
+        </h2>
       </div>
 
-      <div class="columns-2 md:columns-3 mb-5">
-        <div
-        @click="selectedCity = city.translit"
-        v-for="city in cities"
-        :key="city.translit"
-        :title="city.translit"
-        class="select-city__city-link text-sm pb-1"
+      <!-- Если список городов загружается -->
+      <div v-if="cities.status === 'loading'" class="py-8 px-4 mx-auto text-center">Загрузка...</div>
+
+      <!-- Если произошла ошибка загрузки списка городов -->
+      <div v-else-if="cities.status === 'error'" class="py-8 px-4 mx-auto text-center">
+        <p class="font-bold text-red-600 mb-6">Ошибка загрузки</p>
+        <div class="text-center">
+          Ошибка загрузки. Попробуйте обновить страницу
+        </div>
+      </div>
+
+      <!-- Список городов успешно загрузился, отображаем его -->
+      <div
+      v-else-if="cities.status === 'success'"
+      class="columns-2 md:columns-3 mb-5"
+      >
+        <router-link
+        v-for="cityFromList in cities.list"
+        :to="`/region/${ cityFromList.translit }`"
+        :key="cityFromList.translit"
+        :title="cityFromList.translit"
+        class="select-city__city-link text-sm pb-0"
         :class="{
-          'font-bold text-blue-900': city.translit == selectedCity,
-          'font-bold': city.translit == selectedCity,
+          'font-bold text-blue-900': cityFromList == cities.selectedCity,
+          'font-bold': cityFromList == cities.selectedCity,
         }"
-        >{{ city.title }}</div>
+        >{{ cityFromList.title }}</router-link>
       </div>
     </modal-el>
   </teleport>
@@ -39,26 +58,41 @@ export default {
   data() {
     return {
       modalOpen: false,
-      selectedCity: 'selectedCity',
     }
   },
-  mounted() {
-    this.$store.dispatch('loadCities')
+  methods: {
+    loadCities: () => this.$store.dispatch('loadCities'),
   },
+
   computed: {
     ...mapGetters([
       'cities',
     ]),
-    selectedCityEl() {
-      let city = this.cities.filter(
-        city => city.translit === this.selectedCity
-      )
-
-      if (city.length) return city[0];
-
-      return city[0]
+    selectedCityTitle() {
+      return this.cities.selectedCity
+    },
+    selectedCityObj: {
+      get() {
+        return this.$route.params.city
+      },
+      set(newCity) {
+        this.$store.dispatch('selectCity', newCity)
+      }
     },
   },
+
+  watch: {
+    '$route': function(newRoute) {
+      if (newRoute.params.city) {
+        const cityObj = this.cities.list.filter(
+          city => city.translit === newRoute.params.city
+        )[0]
+        this.$store.dispatch('selectCity', cityObj)
+      }
+
+      this.modalOpen = false
+    },
+  }
 }
 </script>
 
@@ -69,8 +103,8 @@ export default {
   cursor: pointer;
 }
 
-  .select-city__city-link {
-    cursor: pointer;
-    display: block;
-  }
+.select-city__city-link {
+  cursor: pointer;
+  display: block;
+}
 </style>

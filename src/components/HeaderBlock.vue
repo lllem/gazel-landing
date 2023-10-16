@@ -25,7 +25,7 @@
 
       <div class="my-1 col-span-12 md:col-span-7">
         <h1 class="font-bold text-xl mb-1">Вывоз мусора ГАЗелью и помощь грузчиков</h1>
-        <p class="mb-6 leading-5 text-blue-200">Профессиональный вывоз мусора ГАЗелью с погрузкой от компании «<srtong class="font-bold text-white">Вывоз мусора ГАЗелью</srtong>»! Возьмем на себя все задачи, от сбора отходов до их доставки на полигон. Избавьтесь от всего лишнего, не тратя силы и время!</p>
+        <p class="mb-6 leading-5 text-blue-200">Профессиональный вывоз мусора ГАЗелью с погрузкой от компании «<strong class="font-bold text-white">Вывоз мусора ГАЗелью</strong>»! Возьмем на себя все задачи, от сбора отходов до их доставки на полигон. Избавьтесь от всего лишнего, не тратя силы и время!</p>
 
         <div>
           <button class="px-4 py-2 font-semibold text-sm border-blue-500 border-solid border-2 bg-blue-500 text-white rounded-xl shadow-sm opacity-100 shadow-blue-500/50 me-6">Заказать</button>
