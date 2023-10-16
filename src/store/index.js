@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
 import Cities from './modules/cities'
+import Order from './modules/order'
 
 export default createStore({
   state: {
@@ -79,5 +80,6 @@ export default createStore({
   },
   modules: {
     Cities,
+    Order,
   }
 })

@@ -4,18 +4,29 @@
     <router-view/>
   </main>
   <FooterEl/>
+  <ModalOrder/>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import TopNav from '@/components/TopNav.vue';
 import FooterEl from '@/components/FooterEl.vue';
+import ModalOrder from '@/components/ModalOrder.vue';
 
 export default {
   name: 'MainWrapper',
   components: {
     TopNav,
     FooterEl,
+    ModalOrder,
   },
+
+  computed: {
+    ...mapGetters([
+      'order'
+    ])
+  },
+
   mounted() {
     this.$store.dispatch('loadCities')
   },

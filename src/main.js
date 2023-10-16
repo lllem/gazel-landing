@@ -9,7 +9,6 @@ import iconEl from '@/components/icons/iconEl.vue'
 import subtitleEl from '@/components/subtitleEl.vue'
 import miniTable from '@/components/core/miniTable.vue'
 import modalEl from '@/components/core/modalEl.vue'
-import modalEl_1 from '@/components/core/modal/modalEl.vue'
 
 const DEFAULT_TITLE = 'Вывоз мусора ГАЗелью'
 
@@ -25,5 +24,4 @@ createApp(App)
   .component('subtitleEl', subtitleEl)
   .component('miniTable', miniTable)
   .component('modalEl', modalEl)
-  .component('modalEl_1', modalEl_1)
   .mount('#app')

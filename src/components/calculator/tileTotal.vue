@@ -20,7 +20,12 @@
 
     <p class="my-5 text-4xl font-extrabold text-center">от&nbsp;{{ String(total) }}&nbsp;₽</p>
 
-    <button class="px-4 mb-3 py-2 font-semibold text-sm bg-blue-500 text-white rounded-xl shadow-sm opacity-100 w-full">Заказать</button>
+    <button
+    @click="openOrderModal"
+    class="px-4 mb-3 py-2 font-semibold text-sm bg-blue-500 text-white rounded-xl shadow-sm opacity-100 w-full"
+    >
+      Заказать
+    </button>
   </div>
 </template>
 
@@ -32,6 +37,13 @@ export default {
     distance: Number,
     movers: Number,
   },
+
+  methods: {
+    openOrderModal(){
+      this.$store.dispatch('openOrderModal', true)
+    },
+  },
+
   computed: {
     total() {
       let total = 0;

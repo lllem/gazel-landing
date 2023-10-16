@@ -1,17 +1,22 @@
 <template>
-  <div v-if="open" class="modal__backdrop" @click="open = false"></div>
-  <div class="modal">
+
+  <div
+  v-if="open"
+  class="modal__backdrop"
+  @click="open = false"></div>
+
+  <div v-if="open" class="modal">
     <div class="modal__wrapper p-4">
       <div class="modal__content bg-white rounded-xl shadow-xl p-4 my-10 container max-w-screen-sm mx-auto">
+
         <button class="modal__close" @click="open = false">
           <icon-el icon="x-mark"/>
         </button>
-        <header
-        class="modal__header text-2xl font-bold mb-4"
-        >
+
+        <header class="modal__header text-2xl font-bold mb-4">
           <slot name="header"/>
+          <slot name="default"/>
         </header>
-        <slot/>
       </div>
     </div>
   </div>
@@ -19,9 +24,11 @@
 
 <script>
 export default {
+
   props: {
     modelValue: Boolean,
   },
+
   computed: {
     open: {
       get() {
@@ -32,18 +39,22 @@ export default {
       },
     },
   },
+
   methods: {},
+
   mounted() {
     const body = document.body;
     const width = body.getBoundingClientRect().width;
     body.style['margin-right'] = `calc(100vw - ${width}px)`;
     body.classList.add('overflow-hidden');
   },
-  beforeUnmount() {
+
+  unmounted() {
     const body = document.body;
     body.style['margin-right'] = `0`;
     body.classList.remove('overflow-hidden');
   },
+
 }
 </script>
 

@@ -28,7 +28,11 @@
         <p class="mb-6 leading-5 text-blue-200">Профессиональный вывоз мусора ГАЗелью с погрузкой от компании «<strong class="font-bold text-white">Вывоз мусора ГАЗелью</strong>»! Возьмем на себя все задачи, от сбора отходов до их доставки на полигон. Избавьтесь от всего лишнего, не тратя силы и время!</p>
 
         <div>
-          <button class="px-4 py-2 font-semibold text-sm border-blue-500 border-solid border-2 bg-blue-500 text-white rounded-xl shadow-sm opacity-100 shadow-blue-500/50 me-6">Заказать</button>
+          <button
+          @click="openOrderModal"
+          class="px-4 py-2 font-semibold text-sm border-blue-500 border-solid border-2 bg-blue-500 text-white rounded-xl shadow-sm opacity-100 shadow-blue-500/50 me-6">
+            Заказать
+          </button>
           <a class="font-bold text-xl nowrap" href="tel:+7 900 000 0000">
             <iconEl icon="phone" solid class="text-blue-300"/>
             <span class="ms-1">+7 900 000 0000</span>
@@ -55,6 +59,9 @@ export default {
   methods: {
     scrollHandler() {
       this.pageYOffset = window.pageYOffset
+    },
+    openOrderModal(){
+      this.$store.dispatch('openOrderModal', true)
     },
   },
   mounted() {

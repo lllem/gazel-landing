@@ -26,7 +26,9 @@
       </div>
 
       <div class="">
-        <button class="px-4 py-2 font-semibold text-sm
+        <button
+        @click="openOrderModal"
+        class="px-4 py-2 font-semibold text-sm
         border-blue-500 border-solid border-2
         bg-blue-500 text-white rounded-md shadow-sm opacity-100
         shadow-blue-500/50">Заказать</button>
@@ -47,6 +49,9 @@ export default {
     // sidebarBlock,
   },
   methods: {
+    openOrderModal(){
+      this.$store.dispatch('openOrderModal', true)
+    },
     scrollHandler() {
       if (window.scrollY > 10) this.$refs.topNav.classList.add('scrolled')
       else this.$refs.topNav.classList.remove('scrolled')
