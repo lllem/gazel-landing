@@ -9,9 +9,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import TopNav from '@/components/TopNav.vue';
-import FooterEl from '@/components/FooterEl.vue';
-import ModalOrder from '@/components/ModalOrder.vue';
+import TopNav from '@/components/TopNav.vue'
+import FooterEl from '@/components/FooterEl.vue'
+import ModalOrder from '@/components/ModalOrder.vue'
 
 export default {
   name: 'MainWrapper',

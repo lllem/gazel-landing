@@ -10,6 +10,7 @@ import subtitleEl from '@/components/subtitleEl.vue'
 import miniTable from '@/components/core/miniTable.vue'
 import modalEl from '@/components/core/modalEl.vue'
 
+
 const DEFAULT_TITLE = 'Вывоз мусора ГАЗелью'
 
 router.beforeEach((to) => {

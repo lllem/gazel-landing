@@ -7,7 +7,15 @@
 
   <div v-if="open" class="modal">
     <div class="modal__wrapper p-4">
-      <div class="modal__content bg-white rounded-xl shadow-xl p-4 my-10 container max-w-screen-sm mx-auto">
+
+      <!-- Modal -->
+      <div
+      class="modal__content bg-white rounded-xl shadow-xl p-4 my-10 container mx-auto"
+      :class="{
+        'max-w-screen-sm': !xs,
+        'max-w-screen-xs': xs,
+      }"
+      >
 
         <button class="modal__close" @click="open = false">
           <icon-el icon="x-mark"/>
@@ -15,9 +23,12 @@
 
         <header class="modal__header text-2xl font-bold mb-4">
           <slot name="header"/>
-          <slot name="default"/>
         </header>
+
+        <slot name="default"/>
       </div>
+      <!-- Modal -->
+
     </div>
   </div>
 </template>
@@ -27,6 +38,7 @@ export default {
 
   props: {
     modelValue: Boolean,
+    xs: Boolean, // Если этот параметр true, то окно узкое
   },
 
   computed: {
@@ -111,5 +123,9 @@ export default {
   right: 0;
   z-index: 1000;
   cursor: pointer;
+}
+
+.max-w-screen-xs {
+  max-width: 400px;
 }
 </style>
