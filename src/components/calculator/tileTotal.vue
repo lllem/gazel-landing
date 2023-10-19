@@ -22,7 +22,7 @@
 
     <button
     @click="openOrderModal"
-    class="px-4 mb-3 py-2 font-semibold text-sm bg-blue-500 text-white rounded-xl shadow-sm opacity-100 w-full"
+    class="px-4 mb-3 py-2 font-semibold text-sm bg-blue-500 text-white rounded-xl w-full"
     >
       Заказать
     </button>

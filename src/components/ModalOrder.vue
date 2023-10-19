@@ -4,19 +4,44 @@
   xs
   >
     <div class="uppercase font-bold">Заказать звонок</div>
-    <form action="">
 
-      <div class="my-5 text-lg font-semibold text-indigo-800">
-        Оставьте свой номер телефона и&nbsp;мы позвоним вам в&nbsp;ближайшее время
+    <form
+    @submit.prevent="onSubmit"
+    class="order-form"
+    ref="order"
+    >
+      <!-- Форма заказа звонка -->
+      <div class="order-form__">
+        <div class="my-5 text-lg font-semibold text-indigo-800">
+          Оставьте свой номер телефона и&nbsp;мы позвоним вам в&nbsp;ближайшее время
+        </div>
+
+        <textInput
+        v-model="phone"
+        type="tel"
+        class="text-2xl w-full my-5"
+        maska="+7(###)###-####"
+        pattern="\+7\(\d{3}\)\d{3}-\d{4}"
+        label="Ваш номер телефона"
+        focus
+        />
+
+        <button
+        class="px-4 mb-3 py-2 font-semibold text-sm text-white rounded-xl w-full text-xl"
+        :class="{
+          'bg-blue-500': valid,
+          'bg-indigo-400 button_disabled': !valid,
+          }"
+        prevent
+        >Отправить</button>
       </div>
+      <!-- / Форма заказа звонка -->
 
-      <textInput
-      v-model="phone"
-      class="text-2xl w-full my-5"
-      maska="+7 ###-###-####"
-      />
+      <!-- Отправка данных -->
 
-      <button class="px-4 mb-3 py-2 font-semibold text-sm bg-blue-500 text-white rounded-xl shadow-sm opacity-100 w-full text-xl">Отправить</button>
+      <!-- Успешно -->
+
+      <!-- Ошибка -->
 
     </form>
   </modal-el>
@@ -31,6 +56,12 @@ export default {
   data() {
     return {
       phone: '+7',
+    }
+  },
+
+  methods: {
+    onSubmit() {
+      console.log('submit')
     }
   },
 
@@ -53,9 +84,19 @@ export default {
         this.$store.dispatch('openOrderModal', value)
       }
     },
+
+    valid() {
+      let number = this.phone.match(/[0-9]/g)
+      if (number) return (number.length === 11 && (number[0] == 7 || number[0] == 8))
+      return false
+    },
   },
+
 }
 </script>
 
 <style lang="scss">
+.button_disabled {
+  pointer-events: none;
+}
 </style>

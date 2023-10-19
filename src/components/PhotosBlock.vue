@@ -14,7 +14,7 @@
       <footer class="photos-block__footer text-center py-10">
         <button
         @click="blockOpened = !blockOpened"
-        class="photos-block__button px-6 py-2 font-semibold text-sm border-blue-500 border-solid border-2 text-white rounded-md shadow-sm opacity-100 shadow-blue-500/50 mx-auto bg-dark">
+        class="photos-block__button px-6 py-2 font-semibold text-sm border-blue-500 border-solid border-2 text-white rounded-md shadow-sm shadow-blue-500/50 mx-auto bg-dark">
           {{ blockOpened ? 'Свернуть' : 'Показать ещё' }}
         </button>
       </footer>

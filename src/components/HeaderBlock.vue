@@ -30,7 +30,7 @@
         <div>
           <button
           @click="openOrderModal"
-          class="px-4 py-2 font-semibold text-sm border-blue-500 border-solid border-2 bg-blue-500 text-white rounded-xl shadow-sm opacity-100 shadow-blue-500/50 me-6">
+          class="px-4 py-2 font-semibold text-sm border-blue-500 border-solid border-2 bg-blue-500 text-white rounded-xl shadow-blue-500/50 me-6">
             Заказать
           </button>
           <a class="font-bold text-xl nowrap" href="tel:+7 900 000 0000">
