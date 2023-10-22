@@ -18,10 +18,10 @@
       </div>
 
       <div class="hidden md:inline-block">
-        <button class="px-4 py-2 font-semibold text-sm
+        <router-link to="/" class="px-4 py-2 font-semibold text-sm
         text-white rounded-md
         border-blue-500 border-solid border-2
-        opacity-100">Рассчитать стоимость</button>
+        opacity-100">Рассчитать стоимость</router-link>
         <!-- TODO Modal -->
       </div>
 
