@@ -52,6 +52,22 @@
       </div>
 
       <!-- Успешно -->
+      <div
+      v-if="order.status === 'success'"
+      class="order-form__error-view
+      text-center"
+      >
+        <CheckIcon class="icon order-form__big-icon text-sky-500 my-5"/>
+
+        <h2 class="text-2xl font-bold mb-2 text-sky-600">Спасибо за заявку</h2>
+
+        <p class="mb-4">Мы свяжемся с вами в ближайшее время</p>
+
+        <button
+        @click.prevent="open = false"
+        class="px-4 mb-3 py-2 font-semibold text-sm text-white rounded-xl w-full text-xl bg-blue-500"
+        >Закрыть</button>
+      </div>
 
       <!-- Ошибка -->
       <div
@@ -79,7 +95,7 @@
 import { mapGetters } from 'vuex'
 import textInput from '@/components/core/inputs/inputText.vue'
 import { vMaska } from "maska" // отдельная зависимость
-import { ArrowPathIcon } from '@heroicons/vue/24/solid'
+import { ArrowPathIcon, CheckIcon } from '@heroicons/vue/24/solid'
 
 export default {
   data() {
@@ -103,6 +119,7 @@ export default {
   components: {
     textInput,
     ArrowPathIcon,
+    CheckIcon,
   },
 
   computed: {

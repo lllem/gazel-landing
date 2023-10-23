@@ -3,7 +3,7 @@ import axios from 'axios'
 const Order = {
   state: {
     order: {
-      status: 'sending', // sending, success, error
+      status: '', // sending, success, error
       modalOpen: false,
       phone: '',
     },
@@ -32,7 +32,7 @@ const Order = {
   },
 
   actions: {
-    // Открвыает/закрывает модальное окно
+    // Открывает/закрывает модальное окно
     openOrderModal(store, openclose) {
       this.commit('OPEN_MODAL', openclose)
     },
@@ -44,9 +44,14 @@ const Order = {
 
       // отправляем на сервер
       await axios
-        .get('/api/order', phone)
+        .get('/api/order.json', phone)
         .then( response => {
-          alert(response)
+          if (response.data === 'success') this.commit('UPDATE_ORDER_STATUS', 'success')
+          // if (response.data.result === 'success') this.commit('UPDATE_ORDER_STATUS', 'success')
+          else {
+            console.log(response)
+            this.commit('UPDATE_ORDER_STATUS', 'error')
+          }
         })
         .catch( error => {
           console.log(error)
