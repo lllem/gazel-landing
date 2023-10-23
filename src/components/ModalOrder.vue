@@ -46,9 +46,8 @@
       class="order-form__error-view
       text-center"
       >
-        <ArrowPathIcon class="icon order-form__big-icon rotate text-sky-500 my-5"/>
-
-        <h2 class="text-2xl font-bold mb-2 text-sky-600">Отправляем...</h2>
+        sending<br>
+        {{ order }}
       </div>
 
       <!-- Успешно -->
@@ -95,7 +94,6 @@
 import { mapGetters } from 'vuex'
 import textInput from '@/components/core/inputs/inputText.vue'
 import { vMaska } from "maska" // отдельная зависимость
-import { ArrowPathIcon, CheckIcon } from '@heroicons/vue/24/solid'
 
 export default {
   data() {
@@ -118,8 +116,6 @@ export default {
 
   components: {
     textInput,
-    ArrowPathIcon,
-    CheckIcon,
   },
 
   computed: {
