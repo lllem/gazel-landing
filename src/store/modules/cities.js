@@ -42,7 +42,6 @@ const Cities = {
     },
 
     selectCity(store, city) {
-      console.log(city, 'vuex')
       if (city) this.commit('UPDATE_SELECTED_CITY', city)
     },
   },

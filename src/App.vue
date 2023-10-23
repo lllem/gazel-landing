@@ -28,6 +28,7 @@ export default {
   },
 
   mounted() {
+    this.$store.dispatch('loadContacts')
     this.$store.dispatch('loadCities')
   },
 }

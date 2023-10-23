@@ -47,7 +47,6 @@ const Order = {
         .get('/api/order.json', phone)
         .then( response => {
           if (response.data === 'success') this.commit('UPDATE_ORDER_STATUS', 'success')
-          // if (response.data.result === 'success') this.commit('UPDATE_ORDER_STATUS', 'success')
           else {
             console.log(response)
             this.commit('UPDATE_ORDER_STATUS', 'error')

@@ -10,15 +10,15 @@
       <div class="">
         <ul class="mb-4">
           <li class="mb-3">
-            <a class="font-bold text-xl nowrap" href="tel:+7 900 000 0000">
+            <a class="font-bold text-xl nowrap" :href="`tel:${ contacts.tel }`">
               <iconEl icon="phone" solid class="text-blue-300"/>
-              <span class="ms-1">+7 900 000 0000</span>
+              <span class="ms-1 nowrap">{{ contacts.tel }}</span>
             </a>
           </li>
           <li>
             <a class="font-bold text-xl nowrap" href="mailto:nnn@nn.ru" title="Электронная почта">
               <iconEl icon="envelope" solid class="text-blue-300"/>
-              <span class="ms-2">nnn@nn.ru</span>
+              <span class="ms-2">{{ contacts.email }}</span>
             </a>
           </li>
         </ul>
@@ -38,15 +38,19 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   methods: {
     openOrderModal(){
       this.$store.dispatch('openOrderModal', true)
     },
   },
+
+  computed: {
+    ...mapGetters([
+      'contacts',
+    ]),
+  },
 }
 </script>
-
-<style lang="scss">
-.how-order-block {}
-</style>

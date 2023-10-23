@@ -33,9 +33,9 @@
           class="px-4 py-2 font-semibold text-sm border-blue-500 border-solid border-2 bg-blue-500 text-white rounded-xl shadow-blue-500/50 me-6">
             Заказать
           </button>
-          <a class="font-bold text-xl nowrap" href="tel:+7 900 000 0000">
+          <a class="font-bold text-xl nowrap" :href="`tel:${ contacts.tel }`">
             <iconEl icon="phone" solid class="text-blue-300"/>
-            <span class="ms-1">+7 900 000 0000</span>
+            <span class="ms-1">{{ contacts.tel }}</span>
           </a>
         </div>
       </div>
@@ -45,17 +45,20 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import selectCity from '@/components/select-city/selectCity.vue'
 
 export default {
   components: {
     selectCity,
   },
+
   data() {
     return {
       pageYOffset: null,
     };
   },
+
   methods: {
     scrollHandler() {
       this.pageYOffset = window.pageYOffset
@@ -64,9 +67,17 @@ export default {
       this.$store.dispatch('openOrderModal', true)
     },
   },
+
+  computed: {
+    ...mapGetters([
+      'contacts'
+    ]),
+  },
+
   mounted() {
     window.addEventListener('scroll', this.scrollHandler)
   },
+
   beforeUnmount() {
     window.removeEventListener('scroll', this.scrollHandler)
   },
@@ -75,26 +86,8 @@ export default {
 
 <style lang="scss">
 .header {
-  &.onscroll {
-    .logo {
-      .logo__symbol {}
-
-      .logo__text {}
-    }
-  }
-
-  .container {}
-
   .header__right-block {
     width: min(280px, 100%);
-  }
-
-  .logo {
-    // grid-template-columns: 7fr 17fr;
-
-    .logo__symbol {}
-
-    .logo__text {}
   }
 }
 </style>
