@@ -3,7 +3,7 @@ import axios from 'axios'
 const Order = {
   state: {
     order: {
-      status: '', // sending, success, error
+      status: 'sending', // sending, success, error
       modalOpen: false,
       phone: '',
     },

@@ -43,10 +43,12 @@
       <!-- Отправка данных -->
       <div
       v-if="order.status === 'sending'"
-      class="order-form__sending-view"
+      class="order-form__error-view
+      text-center"
       >
-        sending<br>
-        {{ order }}
+        <ArrowPathIcon class="icon order-form__big-icon rotate text-green-700 my-5"/>
+
+        <h2 class="text-2xl font-bold mb-2 text-green-900">Отправляем...</h2>
       </div>
 
       <!-- Успешно -->
@@ -57,7 +59,7 @@
       class="order-form__error-view
       text-center"
       >
-        <icon-el icon="x-mark" class="order-form__error-icon text-red-700 my-5"/>
+        <icon-el icon="x-mark" class="order-form__big-icon text-red-700 my-5"/>
 
         <h2 class="text-2xl font-bold mb-2 text-red-900">Возникла ошибка</h2>
 
@@ -77,6 +79,7 @@
 import { mapGetters } from 'vuex'
 import textInput from '@/components/core/inputs/inputText.vue'
 import { vMaska } from "maska" // отдельная зависимость
+import { ArrowPathIcon } from '@heroicons/vue/24/solid'
 
 export default {
   data() {
@@ -99,6 +102,7 @@ export default {
 
   components: {
     textInput,
+    ArrowPathIcon,
   },
 
   computed: {
@@ -136,9 +140,10 @@ export default {
     }
 
     .order-form__error-view {
-      .order-form__error-icon {
-        font-size: 5rem;
-      }
+    }
+
+    .order-form__big-icon {
+      font-size: 5rem;
     }
   }
 
