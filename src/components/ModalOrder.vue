@@ -11,7 +11,10 @@
     ref="order"
     >
       <!-- Форма заказа звонка -->
-      <div class="order-form__">
+      <div
+      v-if="!order.status"
+      class="order-form__form"
+      >
         <div class="my-5 text-lg font-semibold text-indigo-800">
           Оставьте свой номер телефона и&nbsp;мы позвоним вам в&nbsp;ближайшее время
         </div>
@@ -38,10 +41,33 @@
       <!-- / Форма заказа звонка -->
 
       <!-- Отправка данных -->
+      <div
+      v-if="order.status === 'sending'"
+      class="order-form__sending-view"
+      >
+        sending<br>
+        {{ order }}
+      </div>
 
       <!-- Успешно -->
 
       <!-- Ошибка -->
+      <div
+      v-if="order.status === 'error'"
+      class="order-form__error-view
+      text-center"
+      >
+        <icon-el icon="x-mark" class="order-form__error-icon text-red-700 my-5"/>
+
+        <h2 class="text-2xl font-bold mb-2 text-red-900">Возникла ошибка</h2>
+
+        <p class="mb-4">К сожалению, данные не отправились</p>
+
+        <button
+        @click.prevent="formAgain"
+        class="px-4 mb-3 py-2 font-semibold text-sm text-white rounded-xl w-full text-xl bg-red-900 hover:bg-red-600 transition-colors"
+        >Попробовать ещё раз</button>
+      </div>
 
     </form>
   </modal-el>
@@ -61,8 +87,12 @@ export default {
 
   methods: {
     onSubmit() {
-      console.log('submit')
-    }
+      this.$store.dispatch('sendPhone', this.phone)
+    },
+
+    formAgain() {
+      this.$store.dispatch('refreshForm')
+    },
   },
 
   directives: { maska: vMaska }, // отдельная зависимость
@@ -96,6 +126,46 @@ export default {
 </script>
 
 <style lang="scss">
+.order-form {
+  position: relative;
+
+  // По-умолчанию
+  & {
+    .order-form__form {
+      visibility: visible;
+    }
+
+    .order-form__error-view {
+      .order-form__error-icon {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  // Отправка
+  &.order-form_sending {
+
+    .order-form__form {
+      visibility: hidden;
+    }
+  }
+
+  // Успешно
+  &.order-form_success {
+
+    .order-form__form {
+      visibility: hidden;
+    }
+  }
+
+  // Ошибка
+  &.order-form_error {
+
+    .order-form__form {
+      visibility: hidden;
+    }
+  }
+}
 .button_disabled {
   pointer-events: none;
 }
