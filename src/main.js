@@ -6,7 +6,7 @@ import '@/assets/styles/main.scss'
 import './assets/tailwind.css'
 import 'aos/dist/aos.css'
 import iconEl from '@/components/icons/iconEl.vue'
-import subtitleEl from '@/components/subtitleEl.vue'
+import subtitleEl from '@/components/core/subtitleEl.vue'
 import miniTable from '@/components/core/miniTable.vue'
 import modalEl from '@/components/core/modalEl.vue'
 

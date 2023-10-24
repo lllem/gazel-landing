@@ -29,7 +29,7 @@
 <script>
 import HeaderBlock from '@/components/HeaderBlock.vue'
 import ArticlesBlock from '@/components/ArticlesBlock.vue'
-import CalculatorBlock from '@/components/calculator/CalculatorBlock.vue'
+import CalculatorBlock from '@/components/MainBlocks/calculator/CalculatorBlock.vue'
 import BenefitsBlock from '@/components/MainBlocks/BenefitsBlock.vue'
 import introBlock from '@/components/MainBlocks/introBlock.vue'
 import WhenBlock from '@/components/MainBlocks/WhenBlock.vue'

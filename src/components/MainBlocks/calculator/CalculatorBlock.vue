@@ -35,10 +35,10 @@
 </template>
 
 <script>
-import tileFurgon from '@/components/calculator/tileFurgon.vue'
-import tileMovers from '@/components/calculator/tileMovers.vue'
-import tileDistance from '@/components/calculator/tileDistance.vue'
-import tileTotal from '@/components/calculator/tileTotal.vue'
+import tileFurgon from '@/components/MainBlocks/calculator/tileFurgon.vue'
+import tileMovers from '@/components/MainBlocks/calculator/tileMovers.vue'
+import tileDistance from '@/components/MainBlocks/calculator/tileDistance.vue'
+import tileTotal from '@/components/MainBlocks/calculator/tileTotal.vue'
 
 import AOS from 'aos'
 
