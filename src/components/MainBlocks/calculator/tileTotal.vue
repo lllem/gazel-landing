@@ -3,7 +3,10 @@
 
     <h3 class="calculator__subtitle tracking-widest text-start uppercase font-extrabold text-sm">Итого</h3>
 
-    <p class="text-4xl font-extrabold text-center">от&nbsp;{{ String(total) }}&nbsp;₽</p>
+    <p
+    ref="total"
+    class="total-tile__total text-4xl font-extrabold text-center"
+    >от&nbsp;{{ String(totalFormatted) }}&nbsp;₽</p>
 
     <miniTable :tabledata="[
       {
@@ -54,18 +57,43 @@ export default {
 
       total += (this.movers - 1) * 3000;
 
-      return new Intl.NumberFormat('ru-RU').format(total);
+      return total;
+    },
+
+    totalFormatted() {
+      return new Intl.NumberFormat('ru-RU').format(this.total);
     },
   },
 
   watch: {
-    'this.total': function(newTotal, oldTotal) {
-      console.log(newTotal, oldTotal)
+    'total': function(newTotal, oldTotal) {
+      console.log(newTotal, oldTotal, this.$refs.total)
+      this.$refs.total.classList.add('animate')
+      this.$refs.total.addEventListener("animationend", () => {
+        this.$refs.total.classList.remove('animate')
+      })
     },
   },
 }
 </script>
 
 <style lang="scss">
-.total-tile {}
+.total-tile {
+  .total-tile__total.animate {
+    animation:
+      animate 0.5s 1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  } 33% {
+    transform: translateY(40%);
+  } 66% {
+    transform: translateY(-33%);
+  } 100% {
+    transform: translateY(0);
+  }
+}
 </style>
