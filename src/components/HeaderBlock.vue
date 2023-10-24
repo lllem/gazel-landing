@@ -32,7 +32,9 @@
           <buttonEl @click="openOrderModal" class="me-6">Заказать</buttonEl>
 
           <a class="font-bold text-xl nowrap" :href="`tel:${ contacts.tel }`">
-            <iconEl icon="phone" solid class="text-blue-300"/>
+            <i class="text-blue-500 ani-pulse">
+              <iconEl icon="phone" class="ani-ring" solid/>
+            </i>
             <span class="ms-1">{{ contacts.tel }}</span>
           </a>
         </div>

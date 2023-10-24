@@ -66,34 +66,14 @@ export default {
   },
 
   watch: {
-    'total': function(newTotal, oldTotal) {
-      console.log(newTotal, oldTotal, this.$refs.total)
-      this.$refs.total.classList.add('animate')
+    // Анимируем цену при её изменении для привлечения внимания
+    'total': function() {
+      this.$refs.total.classList.add('ani-updown')
+
       this.$refs.total.addEventListener("animationend", () => {
-        this.$refs.total.classList.remove('animate')
+        this.$refs.total.classList.remove('ani-updown')
       })
     },
   },
 }
 </script>
-
-<style lang="scss">
-.total-tile {
-  .total-tile__total.animate {
-    animation:
-      animate 0.5s 1;
-  }
-}
-
-@keyframes animate {
-  0% {
-    transform: translateY(0);
-  } 33% {
-    transform: translateY(40%);
-  } 66% {
-    transform: translateY(-33%);
-  } 100% {
-    transform: translateY(0);
-  }
-}
-</style>

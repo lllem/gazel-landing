@@ -10,12 +10,12 @@
         <selectCity/>
       </div>
 
-      <!-- <div class="ml-auto"> -->
-        <a class="font-bold nowrap" href="tel:+7 900 000 0000">
-          <iconEl icon="phone" solid class="text-blue-300"/>
-          <span class="ms-1">+7 900 000 0000</span>
-        </a>
-      <!-- </div> -->
+      <a class="font-bold nowrap" href="tel:+7 900 000 0000">
+        <i class="text-blue-500 ani-pulse">
+          <iconEl icon="phone" class="ani-ring" solid/>
+        </i>
+        <span class="ms-1">{{ contacts.tel }}</span>
+      </a>
 
       <buttonEl to="/" outline>Рассчитать стоимость</buttonEl>
 
@@ -26,12 +26,20 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import selectCity from '@/components/select-city/selectCity.vue'
 
 export default {
   components: {
     selectCity,
   },
+
+  computed: {
+    ...mapGetters([
+      'contacts',
+    ]),
+  },
+
   methods: {
     openOrderModal(){
       this.$store.dispatch('openOrderModal', true)
@@ -41,10 +49,12 @@ export default {
       else this.$refs.topNav.classList.remove('scrolled')
     }
   },
+
   mounted() {
     document.addEventListener('scroll', this.scrollHandler);
     this.scrollHandler();
   },
+
   beforeUnmount() {
     document.removeEventListener('scroll', this.scrollHandler);
   },

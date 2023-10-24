@@ -1,0 +1,88 @@
+.rotate {
+  animation:
+    rotation // name
+    2s // duration
+    // timing-function
+    // delay
+    infinite // iteration-count
+    // direction
+    // fill-mode
+    ;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+.ani-ring {
+  animation: ring 5s infinite ease-in-out;
+  display: inline-block;
+  transform-origin: 50% 50%;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0);
+  } 6% {
+    transform: rotate(-20deg);
+  } 15% {
+    transform: rotate(45deg);
+  } 20% {
+    transform: rotate(-10deg);
+  } 25% {
+    transform: rotate(0deg);
+  }
+}
+
+.ani-pulse {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background-color: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    animation: pulse 5s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+
+  }25%, 100% {
+    width: 5em;
+    height: 5em;
+    opacity: 0;
+  }
+}
+
+.ani-updown {
+  animation: updown 0.5s 1;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  } 33% {
+    transform: translateY(40%);
+  } 66% {
+    transform: translateY(-33%);
+  } 100% {
+    transform: translateY(0);
+  }
+}

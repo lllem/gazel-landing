@@ -11,13 +11,15 @@
         <ul class="mb-4">
           <li class="mb-3">
             <a class="font-bold text-xl nowrap" :href="`tel:${ contacts.tel }`">
-              <iconEl icon="phone" solid class="text-blue-300"/>
+              <i class="text-blue-500 ani-pulse">
+                <iconEl icon="phone" class="ani-ring" solid/>
+              </i>
               <span class="ms-1 nowrap">{{ contacts.tel }}</span>
             </a>
           </li>
           <li>
-            <a class="font-bold text-xl nowrap" href="mailto:nnn@nn.ru" title="Электронная почта">
-              <iconEl icon="envelope" solid class="text-blue-300"/>
+            <a class="font-bold text-xl nowrap" :href="`mailto:${ contacts.email }`" title="Электронная почта">
+              <iconEl icon="envelope" solid class="text-blue-500"/>
               <span class="ms-2">{{ contacts.email }}</span>
             </a>
           </li>
