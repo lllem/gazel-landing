@@ -13,6 +13,8 @@ import TopNav from '@/components/TopNav.vue'
 import FooterEl from '@/components/FooterEl.vue'
 import ModalOrder from '@/components/ModalOrder.vue'
 
+import AOS from 'aos'
+
 export default {
   name: 'MainWrapper',
   components: {
@@ -30,6 +32,8 @@ export default {
   mounted() {
     this.$store.dispatch('loadContacts')
     this.$store.dispatch('loadCities')
+
+    AOS.init()
   },
 }
 </script>

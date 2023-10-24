@@ -40,8 +40,6 @@ import tileMovers from '@/components/MainBlocks/calculator/tileMovers.vue'
 import tileDistance from '@/components/MainBlocks/calculator/tileDistance.vue'
 import tileTotal from '@/components/MainBlocks/calculator/tileTotal.vue'
 
-import AOS from 'aos'
-
 export default {
   data() {
     return {
@@ -55,9 +53,6 @@ export default {
     tileMovers,
     tileTotal,
     tileDistance,
-  },
-  mounted() {
-    AOS.init()
   },
 }
 </script>
