@@ -27,37 +27,37 @@
 </template>
 
 <script>
-import CalculatorBlock from '@/components/calculator/CalculatorBlock.vue'
 import HeaderBlock from '@/components/HeaderBlock.vue'
-import BenefitsBlock from '@/components/BenefitsBlock.vue'
-import FaqBlock from '@/components/FaqBlock.vue'
-import TaraBlock from '@/components/TaraBlock.vue'
-import MapBlock from '@/components/MapBlock.vue'
-import PriceBlock from '@/components/PriceBlock.vue'
-import PaymentBlock from '@/components/PaymentBlock.vue'
-import introBlock from '@/components/introBlock.vue'
-import WhenBlock from '@/components/WhenBlock.vue'
-import HowBlock from '@/components/HowBlock.vue'
-import PhotosBlock from '@/components/PhotosBlock.vue'
-import TransportBlock from '@/components/TransportBlock.vue'
 import ArticlesBlock from '@/components/ArticlesBlock.vue'
+import CalculatorBlock from '@/components/calculator/CalculatorBlock.vue'
+import BenefitsBlock from '@/components/MainBlocks/BenefitsBlock.vue'
+import introBlock from '@/components/MainBlocks/introBlock.vue'
+import WhenBlock from '@/components/MainBlocks/WhenBlock.vue'
+import TransportBlock from '@/components/MainBlocks/TransportBlock.vue'
+import TaraBlock from '@/components/MainBlocks/TaraBlock.vue'
+import MapBlock from '@/components/MainBlocks/MapBlock.vue'
+import PriceBlock from '@/components/MainBlocks/PriceBlock.vue'
+import PaymentBlock from '@/components/MainBlocks/PaymentBlock.vue'
+import FaqBlock from '@/components/MainBlocks/FaqBlock.vue'
+import PhotosBlock from '@/components/MainBlocks/PhotosBlock.vue'
+import HowBlock from '@/components/MainBlocks/HowBlock.vue'
 
 export default {
   components: {
-    CalculatorBlock,
     HeaderBlock,
+    ArticlesBlock,
+    CalculatorBlock,
     BenefitsBlock,
-    FaqBlock,
+    introBlock,
+    WhenBlock,
+    TransportBlock,
     TaraBlock,
     MapBlock,
     PriceBlock,
     PaymentBlock,
-    introBlock,
-    WhenBlock,
-    HowBlock,
-    TransportBlock,
+    FaqBlock,
     PhotosBlock,
-    ArticlesBlock,
+    HowBlock,
   },
 }
 </script>
