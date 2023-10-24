@@ -12,11 +12,11 @@
       </div>
 
       <footer class="photos-block__footer text-center py-10">
-        <button
+        <buttonEl
+        outline
         @click="blockOpened = !blockOpened"
-        class="photos-block__button px-6 py-2 font-semibold text-sm border-blue-500 border-solid border-2 text-white rounded-md shadow-sm shadow-blue-500/50 mx-auto bg-dark">
-          {{ blockOpened ? 'Свернуть' : 'Показать ещё' }}
-        </button>
+        class="photos-block__button"
+        >{{ blockOpened ? 'Свернуть' : 'Показать ещё' }}</buttonEl>
       </footer>
 
     </div>
@@ -116,9 +116,6 @@ export default {
       pointer-events: none;
       transition: all 0.6s;
     }
-  }
-
-  .photos-block__button {
   }
 }
 

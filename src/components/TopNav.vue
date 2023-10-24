@@ -10,43 +10,27 @@
         <selectCity/>
       </div>
 
-      <div class="ml-auto">
+      <!-- <div class="ml-auto"> -->
         <a class="font-bold nowrap" href="tel:+7 900 000 0000">
           <iconEl icon="phone" solid class="text-blue-300"/>
           <span class="ms-1">+7 900 000 0000</span>
         </a>
-      </div>
+      <!-- </div> -->
 
-      <div class="hidden md:inline-block">
-        <router-link to="/" class="px-4 py-2 font-semibold text-sm
-        text-white rounded-md
-        border-blue-500 border-solid border-2
-        opacity-100">Рассчитать стоимость</router-link>
-        <!-- TODO Modal -->
-      </div>
+      <buttonEl to="/" outline>Рассчитать стоимость</buttonEl>
 
-      <div class="">
-        <button
-        @click="openOrderModal"
-        class="px-4 py-2 font-semibold text-sm
-        border-blue-500 border-solid border-2
-        bg-blue-500 text-white rounded-md shadow-sm opacity-100
-        shadow-blue-500/50">Заказать</button>
-      </div>
+      <buttonEl @click="openOrderModal" >Заказать</buttonEl>
 
-      <!-- <sidebarBlock/> -->
     </nav>
   </header>
 </template>
 
 <script>
 import selectCity from '@/components/select-city/selectCity.vue'
-// import sidebarBlock from '@/components/sidebar/sidebarBlock.vue'
 
 export default {
   components: {
     selectCity,
-    // sidebarBlock,
   },
   methods: {
     openOrderModal(){

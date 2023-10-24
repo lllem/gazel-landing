@@ -25,12 +25,7 @@
         <p class="mb-4">Звоните и&nbsp;пишите — мы&nbsp;работаем ежедневно с&nbsp;9 до&nbsp;18 и&nbsp;обязательно ответим вам!</p>
 
         <div class="">
-          <button
-          @click="openOrderModal"
-          class="px-4 py-2 font-semibold text-sm
-          border-blue-500 border-solid border-2
-          bg-blue-500 text-white rounded-md shadow-sm opacity-100
-          shadow-blue-500/50 w-full md:w-auto">Заказать</button>
+          <buttonEl @click="openOrderModal" >Заказать</buttonEl>
         </div>
       </div>
     </div>

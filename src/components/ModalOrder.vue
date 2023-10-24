@@ -29,16 +29,8 @@
         focus
         />
 
-        <button
-        class="px-4 mb-3 py-2 font-semibold text-sm text-white rounded-xl w-full text-xl"
-        :class="{
-          'bg-blue-500': valid,
-          'bg-indigo-400 button_disabled': !valid,
-          }"
-        prevent
-        >Отправить</button>
+        <buttonEl lg :disabled="!valid" class="w-full mb-3">Отправить</buttonEl>
       </div>
-      <!-- / Форма заказа звонка -->
 
       <!-- Отправка данных -->
       <div
@@ -187,8 +179,5 @@ export default {
       visibility: hidden;
     }
   }
-}
-.button_disabled {
-  pointer-events: none;
 }
 </style>

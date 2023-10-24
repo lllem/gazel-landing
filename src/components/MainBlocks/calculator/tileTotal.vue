@@ -1,7 +1,9 @@
 <template>
-  <div class="total-tile flex justify-between flex-col lg:aspect-square bg-dark-2 p-4">
+  <div class="total-tile flex justify-between flex-col lg:aspect-square bg-dark-2 p-4 gap-4">
 
-    <h3 class="calculator__subtitle tracking-widest text-start uppercase font-extrabold text-sm mb-3">Итого</h3>
+    <h3 class="calculator__subtitle tracking-widest text-start uppercase font-extrabold text-sm">Итого</h3>
+
+    <p class="text-4xl font-extrabold text-center">от&nbsp;{{ String(total) }}&nbsp;₽</p>
 
     <miniTable :tabledata="[
       {
@@ -18,19 +20,12 @@
       },
     ]" class=""/>
 
-    <p class="my-5 text-4xl font-extrabold text-center">от&nbsp;{{ String(total) }}&nbsp;₽</p>
+    <buttonEl @click="openOrderModal" class="w-full">Заказать</buttonEl>
 
-    <button
-    @click="openOrderModal"
-    class="px-4 mb-3 py-2 font-semibold text-sm bg-blue-500 text-white rounded-xl w-full"
-    >
-      Заказать
-    </button>
   </div>
 </template>
 
 <script>
-// Что касается грузчиков на все +3000
 export default {
   props: {
     furgon: Number,
