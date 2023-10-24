@@ -34,6 +34,7 @@
         dynamicBullets: true,
       }"
       class="articles-slider mb-4"
+      data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
       >
         <swiper-slide
         v-for="article in articles"

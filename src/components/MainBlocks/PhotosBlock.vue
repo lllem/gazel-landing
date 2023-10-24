@@ -8,7 +8,12 @@
     <div class="container max-w-screen-lg mx-auto px-4">
 
       <div class="columns-2 md:columns-3 lg:columns-3 gap-4">
-        <img class="photos-block__photo mb-5 rounded-md shadow" v-for="img in images" :src="`/assets/img/photos/preview/${ img }`" alt="TODO" :key="img">
+        <img
+        class="photos-block__photo mb-5 rounded-md shadow"
+        v-for="(img, i) in images" :src="`/assets/img/photos/preview/${ img }`"
+        :key="img"
+        data-aos="fade-up" data-aos-duration="800" :data-aos-delay="100 + 50*i"
+        >
       </div>
 
       <footer class="photos-block__footer text-center py-10">

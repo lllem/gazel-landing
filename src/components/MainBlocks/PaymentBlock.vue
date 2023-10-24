@@ -3,19 +3,25 @@
     <div class="container max-w-lg md:max-w-screen-lg mx-auto px-3">
 
       <subtitleEl>Как происходит оплата?</subtitleEl>
-      <p class="text-indigo-900 font-semibold text-xl max-w-2xl mx-auto mb-10 text-center">Мы предлагаем выгодные условия как для физических лиц, так и&nbsp;предпринимателей, предприятий и&nbsp;муниципальных организаций, вот почему у&nbsp;нас можно оплатить услугу любым удобным способом.</p>
+
+      <p class="text-indigo-900 font-semibold text-xl max-w-2xl mx-auto mb-10 text-center"
+      data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"
+      >Мы предлагаем выгодные условия как для физических лиц, так и&nbsp;предпринимателей, предприятий и&nbsp;муниципальных организаций, вот почему у&nbsp;нас можно оплатить услугу любым удобным способом.</p>
 
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <li
-        v-for="paymentItem in payment" :key="paymentItem.icon"
+        v-for="(paymentItem, i) in payment" :key="paymentItem.icon"
         class="py-4"
+        data-aos="fade-up" data-aos-duration="800" :data-aos-delay="300 + 200*i"
         >
           <iconEl :icon="paymentItem.icon" class="payment-block__icon mx-auto mb-3 text-blue-500"/>
           <p class="text-sm font-semibold lh-1 mb-2 text-indigo-900" v-html="paymentItem.desc"></p>
         </li>
       </ul>
 
-      <p class="text-indigo-900 font-semibold max-w-2xl mx-auto mb-10">Вы можете оплатить вывоз ГАЗелью строительного мусора, бытовых или&nbsp;других отходов наличными, пластиковой картой или&nbsp;электронным кошельком. Также мы принимаем переводы на&nbsp;расчетный счет. Последнее особенно актуально для&nbsp;юрлиц.</p>
+      <p class="text-indigo-900 font-semibold max-w-2xl mx-auto mb-10"
+      data-aos="fade-up" data-aos-duration="800" data-aos-delay="500"
+      >Вы можете оплатить вывоз ГАЗелью строительного мусора, бытовых или&nbsp;других отходов наличными, пластиковой картой или&nbsp;электронным кошельком. Также мы принимаем переводы на&nbsp;расчетный счет. Последнее особенно актуально для&nbsp;юрлиц.</p>
 
     </div>
     <img
@@ -24,6 +30,7 @@
     class="payment-block__bg"
     src="@/assets/img/__large_GAZ_Sobol_10_v3-_low.webp"
     alt="Вывоз мусора газелью, как происходит оплата"
+    data-aos="zoom-out-up" data-aos-duration="800" data-aos-delay="300"
     >
   </section>
 </template>

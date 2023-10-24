@@ -2,6 +2,7 @@
   <h2
   class="subtitle uppercase tracking-widest font-extrabold text-xl mb-4 text-center"
   :class="{ 'text-blue-400 t-gradient_invert': invert, 'text-blue-800 t-gradient': !invert }"
+  data-aos="fade-up" data-aos-duration="600"
   >
     <slot/>
   </h2>
