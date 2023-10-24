@@ -2,9 +2,9 @@
   <!-- Дропдаун -->
   <a
   @click="modalOpen = true"
-  class="select-city font-semibold text-sm text-sky-300 nowrap"
+  class="select-city font-semibold text-sm text-sky-300 hover:text-sky-200 transition nowrap inline-flex items-center gap-1"
   >
-   {{ this.cities.selectedCity.title }} <iconEl icon="chevron-down"/>
+   <MapPinIcon class="icon text-sky-500"/> {{ this.cities.selectedCity.title }} <ChevronDownIcon class="icon text-sky-200"/>
   </a>
   <!-- / Дропдаун -->
 
@@ -53,6 +53,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { ChevronDownIcon, MapPinIcon } from '@heroicons/vue/24/solid'
 
 export default {
   data() {
@@ -60,6 +61,12 @@ export default {
       modalOpen: false,
     }
   },
+
+  components: {
+    ChevronDownIcon,
+    MapPinIcon,
+  },
+
   methods: {
     loadCities: () => this.$store.dispatch('loadCities'),
   },
@@ -98,7 +105,7 @@ export default {
 
 <style scoped lang="scss">
 .select-city {
-  display: inline-block;
+  // display: inline-block;
   line-height: 1.5;
   cursor: pointer;
 }

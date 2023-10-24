@@ -2,7 +2,9 @@
   <section class="mt-5 mb-10 text-center container max-w-screen-lg mx-auto">
 
     <div class="px-4">
-      <p class="mb-2 uppercase font-bold text-blue-600">Главные преимущества сотрудничества с нами</p>
+      <p class="mb-2 uppercase font-bold text-blue-600"
+      data-aos="fade-up" data-aos-duration="600"
+      >Главные преимущества сотрудничества с нами</p>
     </div>
 
     <swiper
@@ -28,6 +30,7 @@
       },
     }"
     class="benefits-slider pt-8 mb-4"
+    data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"
     >
       <swiper-slide
       v-for="benefit in benefits"
@@ -39,7 +42,10 @@
       </swiper-slide>
     </swiper>
 
-    <p class="mb-10 text-lg max-w-screen-md mx-auto font-semibold px-4 text-indigo-800">Далеко не&nbsp;все фирмы, предлагающие такую услугу, могут гарантировать профессиональный подход, для нас&nbsp;же это основной принцип в&nbsp;работе.</p>
+    <p
+    class="mb-10 text-lg max-w-screen-md mx-auto font-semibold px-4 text-indigo-800"
+    data-aos="fade-up" data-aos-duration="900" data-aos-delay="300"
+    >Далеко не&nbsp;все фирмы, предлагающие такую услугу, могут гарантировать профессиональный подход, для нас&nbsp;же это основной принцип в&nbsp;работе.</p>
 
   </section>
 </template>

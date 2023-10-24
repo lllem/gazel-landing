@@ -15,7 +15,9 @@
       v-if="!order.status"
       class="order-form__form"
       >
-        <div class="my-5 text-lg font-semibold text-indigo-800">
+        <div class="my-5 text-lg font-semibold text-indigo-800"
+        data-aos="fade-up" data-aos-duration="800"
+        >
           Оставьте свой номер телефона и&nbsp;мы позвоним вам в&nbsp;ближайшее время
         </div>
 
@@ -27,6 +29,7 @@
         pattern="\+7\(\d{3}\)\d{3}-\d{4}"
         label="Ваш номер телефона"
         focus
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"
         />
 
         <buttonEl lg :disabled="!valid" class="w-full mb-3">Отправить</buttonEl>
@@ -38,9 +41,13 @@
       class="order-form__error-view
       text-center"
       >
-        <ArrowPathIcon class="icon order-form__big-icon text-sky-500 my-5 rotate"/>
+        <ArrowPathIcon class="icon order-form__big-icon text-sky-500 my-5 rotate"
+        data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="100"
+        />
 
-        <h2 class="text-2xl font-bold mb-5 text-sky-600">Отправляем...</h2>
+        <h2 class="text-2xl font-bold mb-5 text-sky-600"
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
+        >Отправляем...</h2>
       </div>
 
       <!-- Успешно -->
@@ -49,7 +56,9 @@
       class="order-form__error-view
       text-center"
       >
-        <CheckIcon class="icon order-form__big-icon text-sky-500 my-5"/>
+        <CheckIcon class="icon order-form__big-icon text-sky-500 my-5"
+        data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300"
+        />
 
         <h2 class="text-2xl font-bold mb-2 text-sky-700">Спасибо за заявку</h2>
 

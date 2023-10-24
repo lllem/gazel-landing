@@ -10,18 +10,21 @@
 
       <!-- Modal -->
       <div
-      class="modal__content bg-white rounded-xl shadow-xl p-4 my-10 container mx-auto"
+      class="modal__content bg-white rounded-xl shadow-xl p-4 my-10 container mx-auto overflow-hidden"
       :class="{
         'max-w-screen-sm': !xs,
         'max-w-screen-xs': xs,
       }"
+      data-aos="zoom-in-up" data-aos-duration="800"
       >
 
         <button class="modal__close" @click="open = false">
           <icon-el icon="x-mark"/>
         </button>
 
-        <header class="modal__header text-2xl font-bold mb-4">
+        <header class="modal__header text-2xl font-bold mb-4"
+        data-aos="fade-дуае" data-aos-duration="600"
+        >
           <slot name="header"/>
         </header>
 

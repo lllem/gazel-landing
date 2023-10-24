@@ -7,9 +7,13 @@
     <header class="article__header bg-dark text-white pt-9 inline-block w-full">
       <div class="container max-w-screen-md mx-auto text-center px-4">
 
-        <h1 class="text-4xl font-bold mе-9 mb-6">{{ currentArticle.title }}</h1>
+        <h1 class="text-4xl font-bold mе-9 mb-6"
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
+        >{{ currentArticle.title }}</h1>
 
-        <p class="text-xl text-blue-200 mb-9">{{ currentArticle.desc }}</p>
+        <p class="text-xl text-blue-200 mb-9"
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="500"
+        >{{ currentArticle.desc }}</p>
 
       </div>
     </header>
@@ -20,12 +24,15 @@
         :src="`/assets/img/articles/${currentArticle.img}`"
         :alt="currentArticle.title"
         class="article__main-img w-full rounded-xl mb-8"
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="600"
         >
       </div>
     </section>
 
 
-    <section class="container mx-auto max-w-screen-md my-8 px-4">
+    <section class="container mx-auto max-w-screen-md my-8 px-4"
+    data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
+    >
       <section v-html="articleHTML"></section>
     </section>
 

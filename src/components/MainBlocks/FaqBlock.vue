@@ -3,7 +3,9 @@
     <div class="grid md:grid-cols-2 gap-8 container max-w-lg md:max-w-screen-lg mx-auto px-4">
 
       <div>
-        <h2 class="md:text-end font-black uppercase text-4xl md:text-5xl text-sky-500">Ответы на&nbsp;частые <span class="text-white">вопросы</span></h2>
+        <h2 class="md:text-end font-black uppercase text-4xl md:text-5xl text-sky-500"
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
+        >Ответы на&nbsp;частые <span class="text-white">вопросы</span></h2>
       </div>
 
       <ul class="spoiler">
@@ -11,6 +13,7 @@
         v-for="(question, i) in questions"
         :key="`question_${ i }`"
         class="spoiler__item text-white text-start mb-0 ps-9"
+        data-aos="fade-up" data-aos-duration="800" :data-aos-delay="300 + 100*i"
         >
           <summary class="spoiler__title text-xl font-bold py-2">
             <icon-el icon="x-mark" class="spoiler__icon"/>
