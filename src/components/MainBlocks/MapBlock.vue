@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import mapIllustration from '@/components/mapBlock/mapIllustration.vue'
+import mapIllustration from '@/components/MainBlocks/mapBlock/mapIllustration.vue'
 
 export default {
   components: {

@@ -57,6 +57,12 @@ export default {
       return new Intl.NumberFormat('ru-RU').format(total);
     },
   },
+
+  watch: {
+    'this.total': function(newTotal, oldTotal) {
+      console.log(newTotal, oldTotal)
+    },
+  },
 }
 </script>
 

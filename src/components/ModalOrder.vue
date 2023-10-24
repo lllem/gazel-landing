@@ -51,14 +51,12 @@
       >
         <CheckIcon class="icon order-form__big-icon text-sky-500 my-5"/>
 
-        <h2 class="text-2xl font-bold mb-2 text-sky-600">Спасибо за заявку</h2>
+        <h2 class="text-2xl font-bold mb-2 text-sky-700">Спасибо за заявку</h2>
 
         <p class="mb-4">Мы свяжемся с вами в ближайшее время</p>
 
-        <button
-        @click.prevent="open = false"
-        class="px-4 mb-3 py-2 font-semibold text-sm text-white rounded-xl w-full text-xl bg-blue-500"
-        >Закрыть</button>
+        <buttonEl lg @click.prevent="open = false" class="w-full mb-3">Закрыть</buttonEl>
+
       </div>
 
       <!-- Ошибка -->
