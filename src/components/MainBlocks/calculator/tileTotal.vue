@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   props: {
     furgon: Number,
@@ -40,9 +42,35 @@ export default {
     openOrderModal(){
       this.$store.dispatch('openOrderModal', true)
     },
+
+    animateTotal() {
+      // Анимируем цену при её изменении для привлечения внимания
+      this.$refs.total.classList.add('ani-updown')
+
+      this.$refs.total.addEventListener("animationend", () => {
+        this.$refs.total.classList.remove('ani-updown')
+      })
+    },
+
+    writeDataToStore() {
+      const calcData = {}
+
+      calcData.city = this.cities.selectedCity.title
+      calcData.furgon = this.furgon
+      calcData.distance = this.distance
+      calcData.movers = this.movers
+      calcData.total = this.total
+
+      this.$store.dispatch('updateCalculatorData', calcData)
+    },
   },
 
   computed: {
+    ...mapGetters([
+      'order',
+      'cities',
+    ]),
+
     total() {
       let total = 0;
 
@@ -66,13 +94,24 @@ export default {
   },
 
   watch: {
-    // Анимируем цену при её изменении для привлечения внимания
     'total': function() {
-      this.$refs.total.classList.add('ani-updown')
+      this.animateTotal()
+      this.writeDataToStore()
+    },
 
-      this.$refs.total.addEventListener("animationend", () => {
-        this.$refs.total.classList.remove('ani-updown')
-      })
+    'furgon': function() {
+      this.animateTotal()
+      this.writeDataToStore()
+    },
+
+    'distance': function() {
+      this.animateTotal()
+      this.writeDataToStore()
+    },
+
+    'movers': function() {
+      this.animateTotal()
+      this.writeDataToStore()
     },
   },
 }

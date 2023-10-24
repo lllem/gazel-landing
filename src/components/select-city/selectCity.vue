@@ -97,7 +97,7 @@ export default {
         this.$store.dispatch('selectCity', cityObj)
       }
 
-      this.modalOpen = false
+      // this.modalOpen = false
     },
   }
 }
@@ -105,7 +105,6 @@ export default {
 
 <style scoped lang="scss">
 .select-city {
-  // display: inline-block;
   line-height: 1.5;
   cursor: pointer;
 }

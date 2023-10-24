@@ -40,8 +40,12 @@
         >Звоните и&nbsp;пишите — мы&nbsp;работаем ежедневно с&nbsp;9 до&nbsp;18 и&nbsp;обязательно ответим вам!</p>
 
         <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-          <buttonEl @click="openOrderModal" >Заказать</buttonEl>
+          <buttonEl @click="openOrderModal" >
+            <PhoneArrowDownLeftIcon class="icon" />
+            <span>Заказать</span>
+          </buttonEl>
         </div>
+
       </div>
     </div>
   </section>
@@ -49,12 +53,17 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { PhoneArrowDownLeftIcon } from '@heroicons/vue/24/solid'
 
 export default {
   methods: {
     openOrderModal(){
       this.$store.dispatch('openOrderModal', true)
     },
+  },
+
+  components: {
+    PhoneArrowDownLeftIcon,
   },
 
   computed: {

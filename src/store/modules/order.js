@@ -6,6 +6,13 @@ const Order = {
       status: '', // sending, success, error
       modalOpen: false,
       phone: '',
+      calculator: {
+        city: null,
+        furgon: null,
+        distance: null,
+        movers: null,
+        price: null,
+      }, // данные из калькулятора
     },
   },
 
@@ -28,6 +35,12 @@ const Order = {
     // Записываем номер телефона в стор
     UPDATE_ORDER_PHONE(state, phone) {
       state.order.phone = phone
+    },
+
+    // Записываем номер телефона в стор
+    UPDATE_CALCULATOR_DATA(state, calcData) {
+      state.order.calculator = calcData
+      console.log(calcData)
     },
   },
 
@@ -60,6 +73,10 @@ const Order = {
 
     refreshForm() {
       this.commit('UPDATE_ORDER_STATUS', '') // Меняем статус на "отправляется"
+    },
+
+    updateCalculatorData(store, CalculatorData) {
+      this.commit('UPDATE_CALCULATOR_DATA', CalculatorData)
     }
   },
 

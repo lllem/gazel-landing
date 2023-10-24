@@ -40,9 +40,13 @@
         <div>
 
           <buttonEl
-          @click="openOrderModal" class="me-6"
+          @click="openOrderModal"
+          class="me-6"
           data-aos="fade-up" data-aos-duration="1400" data-aos-delay="900"
-          >Заказать</buttonEl>
+          >
+            <PhoneArrowDownLeftIcon class="icon" />
+            <span>Заказать</span>
+          </buttonEl>
 
           <a class="font-bold text-xl nowrap inline-block" :href="`tel:${ contacts.tel }`"
           data-aos="fade-up" data-aos-duration="1400" data-aos-delay="1100"
@@ -62,16 +66,18 @@
 <script>
 import { mapGetters } from 'vuex'
 import selectCity from '@/components/select-city/selectCity.vue'
+import { PhoneArrowDownLeftIcon } from '@heroicons/vue/24/solid'
 
 export default {
-  components: {
-    selectCity,
-  },
-
   data() {
     return {
       pageYOffset: null,
     };
+  },
+
+  components: {
+    selectCity,
+    PhoneArrowDownLeftIcon,
   },
 
   methods: {
