@@ -105,7 +105,7 @@ export default {
 
   methods: {
     onSubmit() {
-      this.$store.dispatch('sendPhone', this.phone)
+      this.$store.dispatch('sendData', this.phone)
     },
 
     formAgain() {

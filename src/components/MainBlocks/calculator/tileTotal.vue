@@ -113,6 +113,11 @@ export default {
       this.animateTotal()
       this.writeDataToStore()
     },
+
+    'cities.selectedCity': function() {
+      this.animateTotal()
+      this.writeDataToStore()
+    },
   },
 }
 </script>

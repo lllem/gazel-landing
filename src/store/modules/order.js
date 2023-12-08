@@ -5,13 +5,13 @@ const Order = {
     order: {
       status: '', // sending, success, error
       modalOpen: false,
-      phone: '',
-      calculator: {
+      data: {
+        phone: '',
         city: null,
         furgon: null,
         distance: null,
         movers: null,
-        price: null,
+        total: null,
       }, // данные из калькулятора
     },
   },
@@ -34,13 +34,14 @@ const Order = {
 
     // Записываем номер телефона в стор
     UPDATE_ORDER_PHONE(state, phone) {
-      state.order.phone = phone
+      state.order.data.phone = phone
     },
 
-    // Записываем номер телефона в стор
-    UPDATE_CALCULATOR_DATA(state, calcData) {
-      state.order.calculator = calcData
-      console.log(calcData)
+    // Записываем номер телефона и другую информацию в стор
+    UPDATE_ORDER_DATA(state, calcData) {
+      for (let key in calcData) {
+        state.order.data[key] = calcData[key];
+      }
     },
   },
 
@@ -51,16 +52,29 @@ const Order = {
     },
 
     // Отправка формы на сервер
-    async sendPhone(store, phone) {
+    async sendData({ getters }, phone) {
       this.commit('UPDATE_ORDER_STATUS', 'sending') // Меняем статус на "отправляется"
       this.commit('UPDATE_ORDER_PHONE', phone) // Записываем номер телефона в стор
 
       // отправляем на сервер
       await axios
-        .get('/api/order.json', phone)
+        .post(
+          '/api/',
+          JSON.stringify(getters.order.data),
+          {
+            headers: {
+              // 'Content-Type': 'application/json'
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
+          }
+        )
         .then( response => {
-          if (response.data === 'success') this.commit('UPDATE_ORDER_STATUS', 'success')
-          else {
+          console.log(JSON.stringify(getters.order.data))
+
+          if (response.data.status === 'success') {
+            this.commit('UPDATE_ORDER_STATUS', 'success')
+            console.log(response.data)
+          } else {
             console.log(response)
             this.commit('UPDATE_ORDER_STATUS', 'error')
           }
@@ -76,7 +90,7 @@ const Order = {
     },
 
     updateCalculatorData(store, CalculatorData) {
-      this.commit('UPDATE_CALCULATOR_DATA', CalculatorData)
+      this.commit('UPDATE_ORDER_DATA', CalculatorData)
     }
   },
 
