@@ -213,7 +213,7 @@ export default {
         this.sliders[slider].slideTo(activeIndex, 1000, false);
       }
       this.activeIndex = activeIndex;
-      this.selectedFurgon = this.furgons[activeIndex].vol;
+      this.selectedFurgon = this.furgons[activeIndex];
     },
   },
   setup() {

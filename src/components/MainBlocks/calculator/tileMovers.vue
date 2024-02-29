@@ -8,39 +8,56 @@
 
     <ul class="calculator__movers-buttons font-extrabold text-2xl mb-6">
 
-      <li class="mb-1">
+      <li>
         <buttonEl
           el="label"
-          lg
-          class="w-full mb-3"
-          :outline="moversQty !== 1"
+          md
+          class="mb-1 items-start content-start text-start"
+          :outline="!(moversQty === 0)"
         >
-          <span>1</span>
-          <iconEl icon="user"/>
           <input
           type="radio"
           v-model="moversQty"
-          :value="1"
+          :value="0"
           name="moversQty"
           >
+          <span>Без грузчиков</span>
         </buttonEl>
       </li>
 
       <li>
         <buttonEl
           el="label"
-          lg
-          class="w-full mb-3"
-          :outline="moversQty !== 2"
+          md
+          class="mb-1 items-start content-start text-start"
+          :outline="!(moversQty === 1)"
         >
-          <span>2</span>
-          <iconEl icon="users"/>
+          <input
+          type="radio"
+          v-model="moversQty"
+          :value="1"
+          name="moversQty"
+          >
+          <span>1</span>
+          <iconEl icon="user"/>
+        </buttonEl>
+      </li>
+
+      <li>
+        <buttonEl
+          el="label"
+          md
+          class="mb-1 items-start content-start text-start"
+          :outline="!(moversQty === 2)"
+        >
           <input
           type="radio"
           v-model="moversQty"
           :value="2"
           name="moversQty"
           >
+          <span>2</span>
+          <iconEl icon="users"/>
         </buttonEl>
       </li>
 

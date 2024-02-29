@@ -45,7 +45,7 @@ export default {
     return {
       furgon: null,
       distance: null,
-      movers: null,
+      movers: 0,
     };
   },
   components: {
