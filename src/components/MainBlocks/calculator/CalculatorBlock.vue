@@ -43,9 +43,9 @@ import tileTotal from '@/components/MainBlocks/calculator/tileTotal.vue'
 export default {
   data() {
     return {
-      furgon: null,
+      furgon: {},
       distance: null,
-      movers: null,
+      movers: 0,
     };
   },
   components: {
