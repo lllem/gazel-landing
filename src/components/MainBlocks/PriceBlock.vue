@@ -12,7 +12,7 @@
 
         <p class="mb-4 max-w-2xl mx-auto text-indigo-200"
         data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
-        >Если же вы хотите самостоятельно понять, сколько стоит вывоз мусора ГАЗелью с&nbsp;грузчиками, посмотрите наш прайс. Там указаны примерные расценки, а&nbsp;точная ставка зависит от:</p>
+        >Если же вы хотите самостоятельно понять, сколько стоит вывоз мусора ГАЗелью {{ selectedCity.title }} с&nbsp;грузчиками, посмотрите наш прайс. Там указаны примерные расценки, а&nbsp;точная ставка зависит от:</p>
 
         <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
           <li
@@ -78,6 +78,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   components: {},
   data() {
@@ -109,7 +111,12 @@ export default {
         },
       ],
     }
-  }
+  },
+  computed: {
+    ...mapGetters([
+      'selectedCity',
+    ])
+  },
 }
 </script>
 
