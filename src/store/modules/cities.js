@@ -21,7 +21,7 @@ const Cities = {
       state.cities.status = status
     },
     UPDATE_SELECTED_CITY (state, payload) {
-      state.cities.selectedCity = payload
+      state.cities.selectedCity.translit = payload
     },
   },
 
@@ -41,13 +41,20 @@ const Cities = {
         })
     },
 
-    selectCity(store, city) {
+    selectCity(state, city) {
       if (city) this.commit('UPDATE_SELECTED_CITY', city)
     },
   },
 
   getters: {
     cities: state => state.cities,
+    selectedCity: state => {
+      if (state.cities.list.length) {
+        const city = state.cities.list.find(el => el.translit === state.cities.selectedCity.translit)
+        if (city) return city
+      }
+      return state.cities.selectedCity
+    },
   },
 }
 

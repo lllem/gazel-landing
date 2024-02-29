@@ -4,7 +4,7 @@
   @click="modalOpen = true"
   class="select-city font-semibold text-sm text-sky-300 hover:text-sky-200 transition nowrap inline-flex items-center gap-1"
   >
-   <MapPinIcon class="icon text-sky-500"/> {{ this.cities.selectedCity.title }} <ChevronDownIcon class="icon text-sky-200"/>
+   <MapPinIcon class="icon text-sky-500"/> {{ selectedCity.title }} <ChevronDownIcon class="icon text-sky-200"/>
   </a>
   <!-- / Дропдаун -->
 
@@ -15,7 +15,7 @@
 
       <div class="mb-8">
         <h2 class="text-4xl font-bold text-blue-900">
-          {{ cities.selectedCity.title }}
+          {{ selectedCity.title }}
         </h2>
       </div>
 
@@ -42,8 +42,7 @@
         :title="cityFromList.translit"
         class="select-city__city-link text-sm pb-0"
         :class="{
-          'font-bold text-blue-900': cityFromList == cities.selectedCity,
-          'font-bold': cityFromList == cities.selectedCity,
+          'font-bold text-blue-900': cityFromList.translit == cities.selectedCity.translit,
         }"
         >{{ cityFromList.title }}</router-link>
       </div>
@@ -74,30 +73,16 @@ export default {
   computed: {
     ...mapGetters([
       'cities',
+      'selectedCity',
     ]),
-    selectedCityTitle() {
-      return this.cities.selectedCity
-    },
-    selectedCityObj: {
-      get() {
-        return this.$route.params.city
-      },
-      set(newCity) {
-        this.$store.dispatch('selectCity', newCity)
-      }
-    },
   },
 
   watch: {
     '$route': function(newRoute) {
-      if (newRoute.params.city) {
-        const cityObj = this.cities.list.filter(
-          city => city.translit === newRoute.params.city
-        )[0]
-        this.$store.dispatch('selectCity', cityObj)
-      }
-
-      // this.modalOpen = false
+      if (newRoute.params.city) this.$store.dispatch('selectCity', newRoute.params.city)
+      setTimeout(() => {
+        this.modalOpen = false
+      }, 1000)
     },
   }
 }
