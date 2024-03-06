@@ -30,7 +30,7 @@
       <div class="my-1 col-span-12 md:col-span-7">
         <h1 class="font-bold text-xl mb-1"
         data-aos="fade-up" data-aos-duration="600" data-aos-delay="700"
-        >Вывоз мусора ГАЗелью {{ selectedCity.title }} и помощь грузчиков</h1>
+        >Вывоз мусора ГАЗелью {{ selectedCity.title }}</h1>
 
         <p
         class="mb-6 leading-5 text-blue-200"
